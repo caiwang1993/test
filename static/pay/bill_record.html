@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>账单</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link href="./style/css/reset.css" rel="stylesheet">
+    <link href="./style/css/bill_record.css" rel="stylesheet">
+    <link href="./style/css/mobiscroll.custom-2.5.2.min.css" rel="stylesheet">
+    <script src="./style/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="./style/js/flexible.js"></script>
+
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="header-contain">
+            <a href="javascript:;">
+                <img src="./style/images/pop_pay_return.png" class="return-img">
+            </a>
+            <span class="bill-title">账单</span>
+        </div>
+    </div>
+    <div class="content">
+        <div class="tab-menu">
+            <ul>
+                <li class="active">钱包充值记录</li>
+                <li>游戏消费记录</li>
+                <li>转账记录</li>
+            </ul>
+        </div>
+        <div class="tab-content js-tab">
+            <div class="select-date-box">
+                <label>
+                    <input type="text"  id="dateSelectorOne" value="" class="dill-date" readonly="readonly">
+                    <!--<span class="dill-date" id="dateShowBtn"></span>-->
+                    <i class="down-icon"></i>
+                </label>
+            </div>
+            <div class="bill-list">
+                <ul>
+                    <li>
+                        <div class="recharge-title-date">
+                            <div class="recharge-title">
+                                充值
+                            </div>
+                            <div class="recharge-date">
+                                2019-08-22 00:00
+                            </div>
+                        </div>
+                        <div class="money-num">+1,000.00</div>
+                    </li>
+                    <li>
+                        <div class="recharge-title-date">
+                            <div class="recharge-title">
+                                充值
+                            </div>
+                            <div class="recharge-date">
+                                2019-08-22 00:00
+                            </div>
+                        </div>
+                        <div class="money-num">+1,000.00</div>
+                    </li>
+                    <li>
+                        <div class="recharge-title-date">
+                            <div class="recharge-title">
+                                充值
+                            </div>
+                            <div class="recharge-date">
+                                2019-08-22 00:00
+                            </div>
+                        </div>
+                        <div class="money-num">+1,000.00</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab-content js-tab" style="display: none">
+            <div class="select-date-box">
+                <label>
+                    <input type="date" hidden id="dateShowBtn2">
+                    <span class="dill-date">2019年8月</span>
+                    <i class="down-icon"></i>
+                </label>
+            </div>
+            <div class="bill-list">
+                <ul>
+                    <li>
+                        <div class="recharge-title-date">
+                            <div class="recharge-title">
+                                消费
+                            </div>
+                            <div class="recharge-date">
+                                2019-08-22 00:00
+                            </div>
+                        </div>
+                        <div class="money-num">-1,000.00</div>
+                    </li>
+                    <li>
+                        <div class="recharge-title-date">
+                            <div class="recharge-title">
+                                消费
+                            </div>
+                            <div class="recharge-date">
+                                2019-08-22 00:00
+                            </div>
+                        </div>
+                        <div class="money-num">-1,000.00</div>
+                    </li>
+                    <li>
+                        <div class="recharge-title-date">
+                            <div class="recharge-title">
+                                消费
+                            </div>
+                            <div class="recharge-date">
+                                2019-08-22 00:00
+                            </div>
+                        </div>
+                        <div class="money-num">-1,000.00</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="tab-content js-tab" hidden id="dateShowBtn3">
+            <div class="select-date-box">
+                <label>
+                    <input type="date" hidden>
+                    <span class="dill-date">2019年8月</span>
+                    <i class="down-icon"></i>
+                </label>
+            </div>
+            <div class="bill-list">
+                <ul>
+                    <li>
+                        <div class="recharge-title-date">
+                            <div class="recharge-title">
+                                转账
+                            </div>
+                            <div class="recharge-date">
+                                2019-08-22 00:00
+                            </div>
+                        </div>
+                        <div class="money-num">-1,000.00</div>
+                    </li>
+                    <li>
+                        <div class="recharge-title-date">
+                            <div class="recharge-title">
+                                转账
+                            </div>
+                            <div class="recharge-date">
+                                2019-08-22 00:00
+                            </div>
+                        </div>
+                        <div class="money-num">-1,000.00</div>
+                    </li>
+                    <li>
+                        <div class="recharge-title-date">
+                            <div class="recharge-title">
+                                转账
+                            </div>
+                            <div class="recharge-date">
+                                2019-08-22 00:00
+                            </div>
+                        </div>
+                        <div class="money-num">-1,000.00</div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script>
+
+</script>
+<script type="text/javascript" src="./style/js/mobiscroll.js" ></script>
+<script type="text/javascript">
+
+    $(function () {
+        $('.tab-menu li').click(function () {
+            $(this).addClass("active").siblings("li").removeClass("active");
+            var index = $(this).index();
+            $(".content .js-tab").eq(index).show().siblings(".js-tab").hide();
+        });
+        var now = new Date();
+        var currYear = (new Date()).getFullYear();
+        var currMonth=now.getMonth()+1;
+        /*if(currMonth<10){
+            currMonth="0" +""+ currMonth;
+        }*/
+        $('#dateSelectorOne').val(currYear+'-'+currMonth);
+        var opt={};
+        opt.date = {preset : 'date'};
+        opt.datetime = {preset : 'datetime'};
+        opt.time = {preset : 'time'};
+        opt.default = {
+            theme: 'android-ics light', //皮肤样式
+            display: 'modal', //显示方式
+            mode: 'scroller', //日期选择模式
+            dateFormat: 'yy-mm',
+            lang: 'zh',
+            setText:'sure',
+            cancelText:'cancel',
+            dateOrder:'yymm',//面板中日期排列格式
+            //showNow: true,
+            //nowText: "今天",
+            startYear: currYear - 10, //开始年份
+            endYear: currYear, //结束年份
+            maxDate: new Date(currYear, currMonth-1),//结束年月
+            onSelect: function (valueText, inst) {//选择时事件（点击确定后），valueText 为选择的时间，
+                console.log(valueText)
+            },
+        };
+        //开始时间
+        $("#dateSelectorOne").mobiscroll($.extend(opt['date'], opt['default']));
+    });
+</script>
+
+</body>
+</html>

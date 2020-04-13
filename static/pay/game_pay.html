@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>游戏内充值页面</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="full-screen" content="yes">
+    <link href="./style/css/reset.css" rel="stylesheet">
+    <link href="./style/css/game_pay.css" rel="stylesheet">
+    <script src="./style/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="./style/js/flexible.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="header-contain">
+            <a href="javascript:;">
+                <img src="./style/images/pop_pay_return.png" class="return-img">
+            </a>
+            <span class="sel-pay-type">请选择支付方式</span>
+        </div>
+    </div>
+    <div class="context">
+        <div class="goods-box">
+            <div class="goods-money">商品金额（KIP）:<span class="money-num">1,000.00</span></div>
+            <div class="goods-name">(商品名称：这是商品名称)</div>
+        </div>
+        <div class="pay-type-title">
+            支付方式
+        </div>
+        <div class="pay-type-box">
+            <ul>
+                <li class="select">
+                    <i class="balance-icon"></i>
+                    <span class="pay-name">余额</span>
+                    <span class="balance-unm">10,1000.00</span>
+                    <i class="pay-no-select"></i>
+                </li>
+                <li>
+                    <i class="wechat-icon"></i>
+                    <span class="pay-name">微信</span>
+                    <i class="pay-no-select"></i>
+                </li>
+                <li>
+                    <i class="other-icon-1"></i>
+                    <span class="pay-name">xxxxx</span>
+                    <i class="pay-no-select"></i>
+                </li>
+                <li>
+                    <i class="other-icon-2"></i>
+                    <span class="pay-name">xxxxx</span>
+                    <i class="pay-no-select"></i>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="pay-btn-box">
+        <a href="javascript:;" class="pay-btn js-pay-btn">
+            立即支付
+        </a>
+    </div>
+    <div class="pop">
+        <div class="pop-table">
+            <div class="pop-cell">
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    $(function () {
+        $('.pay-type-box li').click(function () {
+            $(this).addClass("select").siblings("li").removeClass("select")
+        });
+        //支付弹窗
+        $('.js-pay-btn').click(function () {
+            var pop=$('.pop');
+            var result='';
+            pop.addClass("pop-pay");
+            var val =Math.floor(Math.random()*2);
+            //判断余额
+            if(val==1){
+                result+='<div class="pop-box"><a href="javascript:;" class="pop-close js-pop-close"></a><div class="pop-content"><div class="pop-title">余额</div><div class="payable">应付款老挝基普数量：<span class="money-num">8000</span></div><div class="my-balance"><i class="money-icon"></i><span>老挝基普余额：10000</span></div></div><div class="pop-pay-btn js-pop-pay"><a href="javascript:;">立即支付</a></div></div>';
+
+                $('.pop .pop-cell').append(result);
+                //关闭弹窗
+                $('.js-pop-close').click(function () {
+                    $('.pop .pop-cell .pop-box').remove();
+                    $('.pop').removeClass("pop-pay");
+
+                })
+            }else {
+                result+='<div class="pop-box"><div class="pop-content"><div class="pop-title">余额不足，请立即充值</div></div><div class="pop-btn-box"><a href="javascript:;" class="js-pop-close">取消</a><a class="to-charge" href="javascript:;">去充值</a></div></div>';
+                $('.pop .pop-cell').append(result);
+                //关闭弹窗
+                $('.js-pop-close').click(function () {
+                    $('.pop .pop-cell .pop-box').remove();
+                    $('.pop').removeClass("pop-pay");
+                })
+            }
+
+        });
+
+    })
+</script>
+</body>
+</html>

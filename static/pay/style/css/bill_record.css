@@ -1,0 +1,201 @@
+@charset "utf-8";
+html,body{
+    width:100%;
+    height: 100%;
+    background: #E5E5E5;
+}
+* { touch-action: pan-y; }
+a{
+    text-decoration: none;
+}
+.container{
+    width:100%;
+    height: 100%;
+    position: relative;
+}
+.container .header{
+    width:100%;
+    height: 1.3rem;
+    background: #ffffff;
+    padding: 0 2.5%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.container .header .header-contain{
+    width:100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.header .return-img{
+    width: 0.28rem;
+    margin-left: 0.1rem;
+}
+.header .bill-title{
+    width:100%;
+    margin-left: 0.3rem;
+    font-size: 0.4rem;
+    text-align: center;
+    padding-right: 0.5rem;
+    color: #666666;
+}
+.content .tab-menu{
+    width:100%;
+    height: auto;
+    background: #ffffff;
+    padding: 0.3rem 0 0.5rem;
+}
+.content .tab-menu ul{
+    width:95%;
+    margin: 0 auto;
+    height: 1rem;
+    border: 2px solid #e5e5e5;
+    border-radius: 0.2rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.content .tab-menu ul li{
+    width:33.33%;
+    height: 100%;
+    line-height: 0.9rem;
+    text-align: center;
+    color: #666;
+    border-right: 1px solid #e5e5e5;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 0.33rem;
+}
+.content .tab-menu ul li:last-child{
+    border: none;
+}
+.content .tab-menu ul li.active{
+    color:#1B82D1 ;
+
+}
+.select-date-box{
+    width:100%;
+    height: 1.35rem;
+    padding-left: 0.3rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: 0.36rem;
+    color: #666666;
+}
+.select-date-box label{
+    width:30%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.select-date-box label input{
+    width: 55%;
+    height: 100%;
+    border: 0;
+    outline: none;
+    background: inherit;
+    font-size: 0.36rem;
+    color: transparent;
+    text-shadow: 0 0 0 #666;
+}
+.select-date-box label input:focus{
+    border: none;
+}
+.select-date-box .down-icon{
+    display: block;
+    width:0.4rem;
+    height: 0.25rem;
+    background: url(../images/down_icon.png)no-repeat;
+    background-size: 100%;
+    transform:rotate(180deg);
+    -ms-transform:rotate(180deg); 	/* IE 9 */
+    -moz-transform:rotate(180deg); 	/* Firefox */
+    -webkit-transform:rotate(180deg); /* Safari 和 Chrome */
+    -o-transform:rotate(180deg);
+}
+.tab-content .bill-list{
+    width:100%;
+    height: auto;
+    padding: 0 2.5%;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #ffffff;
+}
+.tab-content .bill-list li{
+    width:100%;
+    height: 1.73rem;
+    border-bottom: 1px solid #d6d6da;
+    color: #666666;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+.tab-content .bill-list li:last-child{
+    border: none;
+}
+.tab-content .bill-list li .recharge-title{
+    font-size: 0.4rem;
+    line-height: 0.7rem;
+    color: #333333;
+}
+.tab-content .bill-list li .recharge-date{
+    margin-top: 0.1rem;
+    font-size: 0.36rem;
+    color: #666666;
+}
+.tab-content .bill-list li .money-num{
+    margin-left: auto;
+    margin-right: 0.2rem;
+    font-size: 0.4rem;
+    color: #666666;
+    font-weight: bold;
+}
+.empty{
+    text-align: center;
+    width: 100%;
+    height: 5rem;
+}
+.empty .empty-icon{
+    margin-top:0.5rem ;
+    width:4rem;
+    height: 3rem;
+}
+.empty .empty-text{
+    margin-top: 0.5rem;
+    font-size: 0.3rem;
+}
+#yearwrapper, #monthwrapper, #daywrapper{
+    -webkit-overflow-scrolling: touch!important;
+}
+.android-ics .dwv{
+    display: none;
+}
+.dwwr{
+    min-width: 8rem!important;
+    width: 8rem!important;
+}
+.dropload-down{
+    margin-top: 0.5rem;
+    text-align: center;
+    color: #999;
+    line-height: 1rem;
+}

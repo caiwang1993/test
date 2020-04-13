@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>jQuery三排上下滚动抽奖代码 - 站长素材</title>
+
+    <script>
+        var phoneWidth = parseInt(window.screen.width);
+        var phoneScale = phoneWidth / 640;
+        var ua = navigator.userAgent;//判断浏览器类型
+        if (/Android (\d+\.\d+)/.test(ua)) {
+            var version = parseFloat(RegExp.$1);
+            if (version > 2.3) {
+                document.write('<meta name="viewport" content="width=640, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+            } else {
+                document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+            }
+        } else {
+            document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+        }
+    </script>
+
+    <link rel="stylesheet" href="./style/css/index.css">
+
+    <script src="./style/js/jquery.min.js"></script>
+    <script src="./style/js/easing.js"></script>
+
+</head>
+<body>
+
+<div class="tigerBg">
+    <div class="tigerTxt">您有<span>*</span>次抽奖机会！</div>
+    <div class="num_box">
+        <div class="tiger"></div>
+        <div class="tiger"></div>
+        <div class="tiger"></div>
+    </div>
+    <button class="play"></button>
+</div>
+<script>
+    function Lottery() {
+        var isBegin = false;
+        var u = 150;
+        if (isBegin) return false;
+        isBegin = true;
+        $(".tiger").css('backgroundPositionY', 0);
+        //一等奖 052 二等奖230 三等奖413
+//            var result = "413";
+        var num_arr= [1,2,3]
+        console.log(num_arr)
+        $(".tiger").each(function (index) {
+            var _num = $(this);
+            setTimeout(function () {
+                _num.animate({
+                    backgroundPositionY: (u * 60) - (u * num_arr[index])
+                }, {
+                    duration: 6000 + index * 3000,
+                    easing: "easeInOutCirc",
+                    complete: function () {
+                        isBegin = false;
+                        if (index == 2) {
+//                                抽奖结束 启动按钮 可再次抽奖
+                            $(".play").attr("disabled", false)
+                        }
+                    }
+                });
+            }, index * 300);
+        });
+    }
+    $('.play').click(function () {
+//            点击抽奖的时候 不可立刻再次点击 此时禁用按钮
+        $(this).attr("disabled", true);
+        Lottery()
+    });
+</script>
+
+</body>
+</html>

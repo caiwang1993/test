@@ -1,0 +1,180 @@
+* {
+    padding: 0;
+    margin: 0
+}
+
+body {
+    text-align: center;
+}
+/*.no-remove{
+    overflow: hidden;
+}*/
+.bodyCls{
+    position: fixed;width: 100%;
+}
+
+.ly-plate {
+    position: relative;
+    width: 509px;
+    height: 509px;
+    margin: 50px auto;
+}
+
+.rotate-bg {
+    width: 509px;
+    height: 509px;
+    background: url(../images/ly-plate.png);
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 0%;
+}
+
+.ly-plate div.lottery-star {
+    width: 214px;
+    height: 214px;
+    position: absolute;
+    top: 150px;
+    left: 147px;
+    /*text-indent:-999em;
+    overflow:hidden;
+    background:url(rotate-static.png);*/
+    -webkit-transform:rotate(180deg);
+    outline: none
+}
+
+.ly-plate div.lottery-star #lotteryBtn {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    *left: -107px
+}
+#dfw-game-box{
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 630px;
+    height: 315px;
+    position: relative;
+}
+#dfw-game-box .lattice{
+    width: 45px;
+    height: 45px;
+    border: 1px solid #666666;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+}
+#dfw-game-box .lattice:nth-child(2n-1){
+    background: #999999;
+    z-index: 8;
+}
+
+.user-icon{
+    position: absolute;
+    top: 0;
+    left: -60px;
+    width: 45px;
+    height: 45px;
+    background: #FD8306;
+    transition:top 0.5s ,left 0.5s;
+    -webkit-transition:top 0.5s ,left 0.5s; /* Safari */
+    z-index: 9;
+}
+.user-icon.ini-position{
+    transition:top 0s ,left 0s;
+    -webkit-transition:top 0s ,left 0s; /* Safari */
+}
+
+#dfw-game-box .prize-1{top:0;left: 0}
+#dfw-game-box .prize-2{top:0;left: 45px}
+#dfw-game-box .prize-3{top:45px;left: 45px}
+#dfw-game-box .prize-4{top:90px;left: 45px}
+#dfw-game-box .prize-5{top:135px;left: 45px}
+#dfw-game-box .prize-6{top:180px;left: 45px}
+#dfw-game-box .prize-7{top:225px;left: 45px}
+#dfw-game-box .prize-8{top:270px;left: 45px}
+#dfw-game-box .prize-9{top:270px;left: 90px}
+#dfw-game-box .prize-10{top:270px;left: 135px}
+#dfw-game-box .prize-11{top:225px;left: 135px}
+#dfw-game-box .prize-12{top:225px;left: 180px}
+#dfw-game-box .prize-13{top:180px;left: 180px}
+#dfw-game-box .prize-14{top:135px;left: 180px}
+#dfw-game-box .prize-15{top:90px;left: 180px}
+#dfw-game-box .prize-16{top:90px;left: 135px}
+#dfw-game-box .prize-17{top:45px;left: 135px}
+#dfw-game-box .prize-18{top:0px;left: 135px}
+#dfw-game-box .prize-19{top:0px;left: 180px}
+#dfw-game-box .prize-20{top:0px;left: 225px}
+#dfw-game-box .prize-21{top:0px;left: 270px}
+#dfw-game-box .prize-22{top:0px;left: 315px}
+#dfw-game-box .prize-23{top:45px;left: 315px}
+#dfw-game-box .prize-24{top:90px;left: 315px}
+#dfw-game-box .prize-25{top:90px;left: 270px}
+#dfw-game-box .prize-26{top:135px;left: 270px}
+#dfw-game-box .prize-27{top:180px;left: 270px}
+#dfw-game-box .prize-28{top:225px;left: 270px}
+#dfw-game-box .prize-29{top:270px;left: 270px}
+#dfw-game-box .prize-30{top:270px;left: 315px}
+#dfw-game-box .prize-31{top:270px;left: 360px}
+#dfw-game-box .prize-32{top:270px;left: 405px}
+#dfw-game-box .prize-33{top:225px;left: 405px}
+#dfw-game-box .prize-34{top:180px;left: 405px}
+#dfw-game-box .prize-35{top:180px;left: 450px}
+#dfw-game-box .prize-36{top:135px;left: 450px}
+#dfw-game-box .prize-37{top:90px;left: 450px}
+#dfw-game-box .prize-38{top:90px;left: 405px}
+#dfw-game-box .prize-39{top:45px;left: 405px}
+#dfw-game-box .prize-40{top:0px;left: 405px}
+#dfw-game-box .prize-41{top:0px;left: 450px}
+#dfw-game-box .prize-42{top:0px;left: 495px}
+#dfw-game-box .prize-43{top:0px;left: 540px}
+#dfw-game-box .prize-44{top:45px;left: 540px}
+#dfw-game-box .prize-45{top:90px;left: 540px}
+#dfw-game-box .prize-46{top:135px;left: 540px}
+#dfw-game-box .prize-47{top:180px;left: 540px}
+#dfw-game-box .prize-48{top:225px;left: 540px}
+#dfw-game-box .prize-49{top:270px;left: 540px}
+#dfw-game-box .prize-50{top:270px;left: 585px}
+
+
+.prize-box-bg{
+    display: block;
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.7);
+}
+.table {
+    display: table;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+.table-cell {
+    display: table-cell;
+    position: relative;
+    vertical-align: middle;
+}
+.prize-box-bg .prize-content{
+    position: relative;
+    word-break: break-all;
+    width: 500px;
+    height: 250px;
+    margin: 0 auto;
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333333;
+    font-size: 20px;
+}
+

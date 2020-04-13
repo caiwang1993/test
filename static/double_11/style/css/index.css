@@ -1,0 +1,218 @@
+@charset "utf-8";
+
+/* CSS Document */
+/*css reset*/
+html,
+body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	user-select: none;
+}
+img {
+	border: none;
+}
+body {
+	font: 12px/1.42857143 "Microsoft YaHei", "微软雅黑", "Arial", "宋体";
+	color: #fff;
+	/*margin: 0 auto;*/
+}
+p{margin: 0;padding: 0;}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+a:focus {
+	outline: none;
+}
+
+.clearfix { *zoom:1; }
+.clearfix:after {content:'';display:block;clear:both;overflow:hidden;}
+.v-middle{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+}
+.h-middle{
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+}
+.activity-container{
+	width:100%;
+	min-height: 50.6rem;
+	margin: 0 auto;
+	background: url(../images/bg.jpg)no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+	padding-top: 2.02rem;
+	box-sizing: border-box;
+	padding-bottom: 1rem;
+}
+.activity-title-box {
+	width: 100%;
+	height: 6.32rem;
+	margin: 0 auto;
+	background: url(../images/title.png)no-repeat;
+	background-size:100% 100%;
+	padding-top: 5.5rem;
+	box-sizing: border-box;
+}
+.activity-title-box .act-time{
+	text-align: center;
+	font-size: 0.4rem;
+}
+.lottery-times{
+	font-size: 0.5rem;
+	text-align: center;
+	position: relative;
+	top: 1.5rem;
+}
+
+.lottery-box{
+	width: 100%;
+	height: 14.57rem;
+	margin: 0.8rem auto 0;
+	padding: 2.5rem 1.25rem 0 1.3rem;
+	box-sizing: border-box;
+	background: url(../images/part1.png)no-repeat;
+	background-size: 100% 100%;
+}
+.lottery-box ul{
+	width:100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+.lottery-box li{
+	width: 2.58rem;
+	height: 3.1rem;
+	margin-left: 1.06rem;
+	margin-bottom: 0.93rem;
+	background: url(../images/f1.png)no-repeat;
+	background-size: 100% 100%;
+}
+.lottery-box li:nth-child(3n+1){
+	margin-left: 0;
+}
+.lottery-box li.on{
+	animation: rotate 2s ease-in-out;
+}
+.reward-box{
+	width:100%;
+	height: 100%;
+	display: none;
+	background: url("../images/f5.png")no-repeat;
+	background-size: 100% 100%;
+	padding-top: 0.46rem;
+	box-sizing: border-box;
+
+}
+.reward-box .reward-img{
+	width: 1.06rem;
+	height: 1.06rem;
+	margin: 0 auto;
+	display: block;
+}
+.reward-box .reward-name{
+	width: 100%;
+	text-align: center;
+	color: #FF9A08;
+	font-size: 0.36rem;
+}
+@keyframes rotate {
+	0% {transform: rotateY(0deg)  }
+	50%{transform: rotateY(180deg)}
+	100%{transform: rotateY(360deg)}
+}
+
+.act-rules-box{
+	width: 100%;
+	margin: 0 auto;
+}
+.act-rules-box .act-rules{
+	margin-left:0.8rem;
+	color: #ffffff;
+	font-size: 0.3rem;
+	width:90%;
+}
+.act-rules-box .rule-title{
+	font-size: 0.33rem;
+	font-weight: bold;
+	margin: 0.3rem 0;
+}
+.act-rules-box .act-rules p{
+	line-height: 0.7rem;
+}
+.act-rules-box .rule-img{
+	margin: 0.5rem auto 0;
+	width: 7.75rem;
+	height: 6.52rem;
+	display: block;
+}
+.act2-title{
+	font-size: 0.5rem;
+	text-align: center;
+	position: relative;
+	top: 2.3rem;
+}
+.limit-time-act{
+	width: 100%;
+	height: 7.12rem;
+	margin: 2rem auto 0;
+	background: url(../images/part2.png)no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+}
+.limit-time-act .buy-btn{
+	position: absolute;
+	left: 7.22rem;
+	top: 3.37rem;
+	width: 3.44rem;
+	height: 1.16rem;
+	background: url(../images/buy_light.png)no-repeat;
+	background-size: 100% 100%;
+	display: block;
+	font-size: 0.33rem;
+	color: #A5062F;
+	line-height: 1.1rem;
+	text-align: center;
+}
+.limit-time-act .buy-btn.disabled{
+	background: url(../images/buy_gry.png)no-repeat;
+	background-size: 100% 100%;
+	color: #666666;
+}
+.limit-time-act .activity-time{
+	position: absolute;
+	left: 7.22rem;
+	top: 4.8rem;
+	width: 3.44rem;
+	height: 1.16rem;
+	text-align: center;
+	font-size: 0.3rem;
+}
+.limit-time-act .activity-time .time{
+	display: inline-block;
+	padding: 0.1rem 0.2rem;
+	background: #065C5F;
+}
+.tips{
+	text-align: center;
+	color: #FFAB34;
+	margin-top: 0.2rem;
+}
+::-webkit-scrollbar{
+	display: none;
+}

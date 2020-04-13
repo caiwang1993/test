@@ -1,0 +1,225 @@
+@charset "utf-8";
+
+/* CSS Document */
+/*css reset*/
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    user-select: none;
+}
+*{
+    box-sizing: border-box;
+}
+
+img {
+    border: none;
+}
+
+p{margin: 0;padding: 0;}
+
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+a:focus {
+    outline: none;
+}
+.clearfix { *zoom:1; }
+.clearfix:after {content:'';display:block;clear:both;overflow:hidden;}
+.act-container{
+    width:100%;
+   /* height: 34.9rem;*/
+    background: url(../images/lx_bg.png)no-repeat;
+    background-size: 100% 100%;
+    padding-top: 0.76rem;
+    box-sizing: border-box;
+    padding-bottom: 0.5rem;
+}
+.act-container .activity-logo{
+    margin: 0 auto;
+    width: 4.27rem;
+    height: 1.85rem;
+    display: block;
+}
+.act-container .activity-title-img{
+    margin: 1.1rem auto 0;
+    width: 11.36rem;
+    height:3.11rem;
+    display: block;
+}
+.act-container .to-login-img{
+    margin: 0.8rem auto 0;
+    width: 5.067rem;
+    height: 1.52rem;
+    display: block;
+}
+.act-container .to-login-img img{
+    width:100%;
+    height: 100%;
+    vertical-align: top;
+}
+.gold-exchange-box{
+    margin: 1.32rem auto 0;
+    width: 11.89rem;
+    height: 9.53rem;
+    background: url(../images/lx_bg_zhuan.png)no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    padding: 2.1rem 0 0 0.43rem;
+    box-sizing: border-box;
+}
+
+.gold-exchange-box .my-gold-box{
+    color: #333333;
+    font-size: 0.33rem;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 0.565rem;
+    top: 1.424rem;
+}
+.gold-exchange-box .my-gold-box .gold-icon{
+    width:0.463rem;
+    height: 0.463rem;
+    background: url(../images/lx_jinbi.png)no-repeat;
+    background-size: 100% 100%;
+    margin-right: 0.2rem;
+}
+.gold-exchange-box .exchange-item,.gold-get-box .exchange-item{
+    width: 11.03rem;
+    height: 2.1rem;
+    background: #FFEDCA;
+    border-radius: 0.23rem;
+    margin-bottom: 0.3rem;
+    display: flex;
+    align-items: center;
+    color: #333333;
+}
+.gold-exchange-box .exchange-item .reward-img{
+    width: 2.15rem;
+    height: 1.23rem;
+    margin-left: 0.43rem;
+}
+.gold-get-box .exchange-item .reward-img{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 0.12rem;
+}
+.gold-exchange-box .exchange-item .exchange-content,.gold-get-box .exchange-item .exchange-content{
+    margin-left: 0.23rem;
+}
+.exchange-content .reward-name{
+    font-size: 0.43rem;
+    display: flex;
+    align-items: center;
+}
+.exchange-content .reward-name span{
+    font-size: 0.33rem;
+    display: block;
+}
+.exchange-content  .consume-gold{
+    margin-top: 0.12rem;
+    font-size: 0.33rem;
+}
+.gold-exchange-box .exchange-item .exchange-btn{
+    margin-left: auto;
+    margin-right:0.23rem;
+    width: 2.38rem;
+    height: 0.86rem;
+    background: url(../images/lx_button.png)no-repeat;
+    background-size: 100% 100%;
+    line-height:0.86rem;
+    text-align: center;
+    font-size: 0.33rem;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.gold-exchange-box .exchange-item .exchange-btn.disabled{
+    background: url(../images/lx_button2.png)no-repeat;
+    background-size: 100% 100%;
+    color: #585757;
+}
+
+.gold-get-box{
+    margin: 0.927rem auto 0;
+    width: 11.89rem;
+    height: auto;
+    background: url(../images/lx_bg_dh.png)no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    padding: 1.457rem 0 0.4rem 0.43rem;
+    box-sizing: border-box;
+}
+.gold-get-box .exchange-item{
+    height: auto;
+    min-width: 2.1rem;
+    padding: 0.3rem 0;
+}
+
+.gold-get-box .exchange-item .lq-btn{
+    margin-left: auto;
+    margin-right:0.23rem;
+    width: 2.38rem;
+    height: 0.86rem;
+    background: url(../images/lx_button.png)no-repeat;
+    background-size: 100% 100%;
+    line-height:0.86rem;
+    text-align: center;
+    font-size: 0.33rem;
+    color: #ffffff;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.gold-get-box .exchange-item .lq-btn.disabled{
+    background: url(../images/lx_button2.png)no-repeat;
+    background-size: 100% 100%;
+    color: #585757;
+}
+.gold-get-box .exchange-item .get-gold-num{
+    margin-top: 0.12rem;
+    font-size: 0.33rem;
+}
+.gold-get-box .exchange-item .get-type{
+    font-size: 0.33rem;
+    margin-top: 0.12rem;
+}
+.gold-get-box  .progress-box{
+    width:4.04rem;
+    height: 0.1rem;
+    background: #E5C588;
+    border-radius: 9.9rem;
+}
+.gold-get-box  .progress-box .progressing{
+    height: 100%;
+    background: #FA761E;
+    border-radius: 9.9rem;
+}
+.gold-get-box  .online-time{
+    display: inline-block;
+    margin-left: 0.26rem;
+    font-size: 0.265rem;
+}
+
+.copyright{
+    width: 11.89rem;
+    margin: 0.366rem auto 0;
+    text-align: right;
+    font-size: 0.3rem;
+    color: #333333;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}

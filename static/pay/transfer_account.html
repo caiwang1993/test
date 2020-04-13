@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>转账</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link href="./style/css/reset.css" rel="stylesheet">
+    <link href="style/css/recharge_phone.css" rel="stylesheet">
+    <script src="./style/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="./style/js/flexible.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="header-contain">
+            <a href="javascript:;">
+                <img src="./style/images/pop_pay_return.png" class="return-img">
+            </a>
+        </div>
+        <div class="account-info-box">
+            <img src="./style/images/head_icon.png" class="head-icon">
+            <span class="user-id" >ID：27136657</span>
+            <a href="javascript:;" class="js-copy" data-id="27136657">
+                <i class="copy-icon"></i>
+            </a>
+        </div>
+        <div class="account-balance-box">
+            <div class="account-title">账户余额(KIP)</div>
+            <div class="account-balance">0.00</div>
+        </div>
+    </div>
+    <div class="content">
+        <div class="">
+            <div class="balance-recharge js-balance">
+                <ul>
+                    <li>
+                        <i class="phone-icon"></i>
+                        <span class="pay-name">对方ID</span>
+                        <input placeholder="" type="text" class="input-phone js-target-id">
+                    </li>
+                    <li>
+                        <i class="money-icon"></i>
+                        <span class="pay-name">金额</span>
+                        <input placeholder="" type="text" class="input-num js-num" value="1,000">
+                    </li>
+                </ul>
+            </div>
+            <div class="pay-type-title">
+                快速选择
+            </div>
+            <div class="fast-select">
+                <ul>
+                    <li class="active" data-num="1,000">
+                        <span>1,000</span>
+                    </li>
+                    <li  data-num="5,000">
+                        <span>5,000</span>
+                    </li>
+                    <li  data-num="10,000">
+                        <span>10,000</span>
+                    </li>
+                    <li  data-num="20,000">
+                        <span>20,000</span>
+                    </li>
+                    <li  data-num="50,000">
+                        <span>50,000</span>
+                    </li>
+                    <li  data-num="100,000">
+                        <span>100,000</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="pay-btn-box">
+                <a href="javascript:;" class="pay-btn js-pay-btn">
+                    立即转账
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./style/js/layer/layer.js"></script>
+<script>
+    $(function(){
+        //复制Id
+        $('.js-copy').click(function(){
+            var data=$(this).data('id');
+            var oInput = document.createElement('input');
+            oInput.value = data;
+            document.body.appendChild(oInput);
+            oInput.select(); // 选择对象
+            document.execCommand("Copy"); // 执行浏览器复制命令
+            oInput.className = 'oInput';
+            oInput.style.display='none';
+            layer.msg('复制成功');
+        });
+        $('.fast-select li').click(function () {
+            $(this).addClass("active").siblings("li").removeClass("active");
+            var val=$(this).attr("data-num");
+            $('.js-num').val(val);
+        });
+    });
+
+
+</script>
+</body>
+</html>

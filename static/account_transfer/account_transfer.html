@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>账号转移</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="full-screen" content="yes">
+    <link href="./style/css/reset.css" rel="stylesheet">
+    <link href="style/css/account_transfer.css" rel="stylesheet">
+    <script src="./style/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="./style/js/flexible.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="header-title">
+        账号迁移
+    </div>
+    <div class="content">
+        <form>
+            <div class="w-item">
+                <label class="w-label">
+                    老账号：
+                </label>
+                <input type="text" class="w-input" placeholder="请输入需要迁移的老账号">
+            </div>
+            <div class="w-item">
+                <label class="w-label">
+                    老账号角色信息：
+                </label>
+                <div class="select-role-info w-input">
+                    <input  class="w-select js-select" type="text" placeholder="请选择角色信息" readonly="readonly" >
+                    <div class="role-info" id="select-role" style="display: none">
+                        <ul>
+                            <li class="role-item">
+                                <span class="server-name">测试一副1</span>
+                                <span class="role-id">251466351</span>
+                                <span class="role-name">战无敌1</span>
+                            </li>
+                            <li class="role-item">
+                                <span class="server-name">测试一副2</span>
+                                <span class="role-id">251466352</span>
+                                <span class="role-name">战无敌2</span>
+                            </li><li class="role-item">
+                            <span class="server-name">测试一副3</span>
+                            <span class="role-id">251466354</span>
+                            <span class="role-name">战无敌4</span>
+                        </li><li class="role-item">
+                            <span class="server-name">测试一副</span>
+                            <span class="role-id">25146635</span>
+                            <span class="role-name">战无敌</span>
+                        </li><li class="role-item">
+                            <span class="server-name">测试一副</span>
+                            <span class="role-id">25146635</span>
+                            <span class="role-name">战无敌</span>
+                        </li><li class="role-item">
+                            <span class="server-name">测试一副</span>
+                            <span class="role-id">25146635</span>
+                            <span class="role-name">战无敌</span>
+                        </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="w-item">
+                <label class="w-label">
+                    新账号：
+                </label>
+                <input type="text" class="w-input" value="" placeholder="请输入新账号">
+
+            </div>
+            <div class="w-item">
+                <label class="w-label">
+                    新区服：
+                </label>
+                <input type="text" class="w-input" placeholder="" disabled>
+            </div>
+            <div class="w-item">
+                <label class="w-label">
+                </label>
+                <a href="javascript:;" class="transfer-btn">确认迁移</a>
+            </div>
+        </form>
+
+    </div>
+</div>
+<script src="./style/js/layer/layer.js"></script>
+<script>
+    $(function(){
+        var ua = window.navigator.userAgent;
+        if(ua.indexOf('Android') > -1 || ua.indexOf('Adr') > -1){
+            var winHeight = $(window).height(); //获取当前页面高度
+            $(window).resize(function() {
+                var thisHeight = $(this).height();
+                if (winHeight - thisHeight > 50) {
+                    $('body').css('height', winHeight + 'px');
+                } else {
+                    $('body').css('height', '100%');
+                }
+            });
+        }
+
+
+
+    });
+    $('.js-select').click(function () {
+        $("#select-role").toggle()
+    });
+    $('#select-role .role-item').click(function () {
+        var val1=$(this).find(".server-name").text();
+        var val2=$(this).find(".role-id").text();
+        var val3=$(this).find(".role-name").text();
+        console.log(val1,val2,val3);
+        $('.js-select').val(val1+"-"+val2+"-"+val3);
+        $("#select-role").hide()
+    })
+
+</script>
+</body>
+</html>

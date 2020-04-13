@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>十月活动</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="blank">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="full-screen" content="yes">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link href="./style/css/reset.css" rel="stylesheet">
+    <link href="./style/css/invite_people.css" rel="stylesheet">
+    <script src="./style/js/jquery-1.11.1.min.js"></script>
+    <script src="./style/js/common.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+    <div class="act-container">
+        <img src="./style/images/lx_logo.png" class="activity-logo">
+        <img src="./style/images/lx_title.png" class="activity-title-img">
+        <a href="javascript:;" class="to-login-img js-go-login">
+            <img src="./style/images/lx_login.png">
+        </a>
+        <div class="gold-exchange-box">
+            <div class="my-gold-box">
+                <i class="gold-icon"></i>
+                <p>我的金币：<span style="color: #FF7D1E">20</span></p>
+            </div>
+            <div class="exchange-item">
+                <img src="./style/images/lx_ten.png" class="reward-img">
+                <div class="exchange-content">
+                    <div class="reward-name">10元现金红包<span style="color: #FF7D1E"> （0/1）</span></div>
+                    <div class="consume-gold">
+                        消耗金币：<span style="color: #FF7D1E">10</span>
+                    </div>
+                </div>
+                <a href="javascript:;" class="exchange-btn js-exchange-btn">
+                    兑换
+                </a>
+            </div>
+            <div class="exchange-item">
+                <img src="./style/images/lx_five.png" class="reward-img">
+                <div class="exchange-content">
+                    <div class="reward-name">5元现金红包<span style="color: #FF7D1E"> （0/1）</span></div>
+                    <div class="consume-gold">
+                        消耗金币：<span style="color: #FF7D1E">5</span>
+                    </div>
+                </div>
+                <a href="javascript:;" class="exchange-btn js-exchange-btn ">
+                    兑换
+                </a>
+            </div>
+            <div class="exchange-item">
+                <img src="./style/images/lx_tow.png" class="reward-img">
+                <div class="exchange-content">
+                    <div class="reward-name">2元优惠券<span style="color: #FF7D1E"> （0/3）</span></div>
+                    <div class="consume-gold">
+                        消耗金币：<span style="color: #FF7D1E">2</span>
+                    </div>
+                </div>
+                <a href="javascript:;" class="exchange-btn js-exchange-btn">
+                    兑换
+                </a>
+            </div>
+        </div>
+        <div class="gold-get-box">
+            <div class="exchange-item">
+                <img src="./style/images/lx_zc.png" class="reward-img">
+                <div class="exchange-content">
+                    <div class="reward-name">用户注册<span style="color: #FF7D1E"> （1/1）</span></div>
+                    <div class="get-gold-num">
+                        奖励金币：<span style="color: #FF7D1E">2</span>
+                    </div>
+                </div>
+                <a href="javascript:;" class="lq-btn js-lq-btn" style="display: none">
+                    领取
+                </a>
+                <a href="javascript:;" class="lq-btn js-lq-btn disabled">
+                    已领取
+                </a>
+                <a href="javascript:;" class="lq-btn js-lq-btn disabled" style="display: none">
+                    领取
+                </a>
+            </div>
+            <div class="exchange-item">
+                <img src="./style/images/lx_phone.png" class="reward-img">
+                <div class="exchange-content">
+                    <div class="reward-name">绑定手机号<span style="color: #FF7D1E"> （0/1）</span></div>
+                    <div class="get-gold-num">
+                        奖励金币：<span style="color: #FF7D1E">2</span>
+                    </div>
+                </div>
+                <a href="javascript:;" class="lq-btn js-lq-btn">
+                    领取
+                </a>
+            </div>
+            <div class="exchange-item">
+                <img src=./style/images/lx_zx.png" class="reward-img">
+                <div class="exchange-content">
+                    <div class="reward-name">任意游戏在线一小时<span style="color: #FF7D1E"> （0/1）</span></div>
+                    <div class="get-gold-num">
+                        奖励金币：<span style="color: #FF7D1E">1</span>
+                    </div>
+                    <div style="display: flex;align-items: center">
+                        <div class="progress-box">
+                            <div class="progressing" style="width: 50%"></div>
+                        </div>
+                        <span class="online-time">已在线：60分钟</span>
+                    </div>
+
+                    <div class="get-type">
+                        每日可完成1次（<span style="color: #FF7D1E">1金币</span>），<span style="color: #FF7D1E">5次封顶</span>
+                    </div>
+                </div>
+                <a href="javascript:;" class="lq-btn js-lq-btn">
+                    领取
+                </a>
+            </div>
+            <div class="exchange-item">
+                <img src="./style/images/lx_share.png" class="reward-img">
+                <div class="exchange-content">
+                    <div class="reward-name">邀请好友注册并绑定手机号<span style="color: #FF7D1E"> （0/5）</span></div>
+                    <div class="get-gold-num">
+                        奖励金币：<span style="color: #FF7D1E">1</span>
+                    </div>
+                    <div class="get-type">
+                        每个好友奖励<span style="color: #FF7D1E;margin-left: 5px">1金币，5个封顶</span>
+                    </div>
+                </div>
+                <a href="javascript:;" class="lq-btn js-lq-btn">
+                    领取
+                </a>
+            </div>
+        </div>
+        <p class="copyright">---以上活动最终解释权归一牛游戏所有</p>
+    </div>
+    <script src="./style/js/jquery-1.11.1.min.js"></script>
+    <script src="./style/js/layer.js"></script>
+
+    <script>
+        $(function () {
+            $user = "{:is_login()}";
+            if(!parseInt($user)>0){
+                $('.js-lq-btn,.js-exchange-btn').addClass("disabled");
+            }
+            $('.js-go-login').click(function () {
+
+            })
+        })
+    </script>
+</body>
+</html>

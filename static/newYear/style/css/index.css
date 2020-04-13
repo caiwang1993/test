@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0
+}
+
+.tigerBg {
+    width: 640px;
+    height: 100%;
+    min-height: 860px;
+    max-height: 1136px;
+    background: url("../images/lottery_draw.png");
+    position: absolute;
+}
+
+.play {
+    width: 516px;
+    height: 126px;
+    background: url("../images/play.png");
+    position: absolute;
+    top: 615px;
+    left: 70px;
+    border: none;
+}
+:focus{
+    outline: 0;
+}
+.num_box {
+    height: 410px;
+    width: 460px;
+    overflow: hidden;
+    text-align: center;
+    position: absolute;
+    top: 210px;
+    left: 90px;
+}
+
+.tiger {
+    background: url(../images/tiger.png);
+    width: 150px;
+    height: 410px;
+    float: left;
+}
+
+.num_box .tiger:nth-child(1) {
+    margin-left: 0px;
+}
+
+.num_box .tiger:nth-child(2) {
+    margin-left: 5px;
+    background: url(../images/tiger.png)
+}
+
+.num_box .tiger:nth-child(3) {
+    margin-left: 5px;
+    background: url(../images/tiger.png)
+}
+
+.tigerTxt {
+    background: #DE141D;
+    width: 475px;
+    height: 80px;
+    position: absolute;
+    left: 85px;
+    top: 165px;
+    z-index: 10;
+    text-align: center;
+    line-height: 80px;
+    color: #ffffff;
+    font-size: 29px;
+    font-weight: 900;
+}

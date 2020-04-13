@@ -1,0 +1,247 @@
+@charset "utf-8";
+html,body{
+    width:100%;
+    height: 100%;
+    background: #E5E5E5;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width:100%;
+    height: 100%;
+    position: relative;
+}
+.container .header{
+    width:100%;
+    height: 5.73rem;
+    background: #1B82D1;
+    padding: 0 2.5%;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+.container .header .header-contain{
+    width:100%;
+    height: 1rem;
+    display: flex;
+    align-items: center;
+
+}
+.header .return-img{
+    width: 0.28rem;
+    margin-left: 0.1rem;
+}
+.header .account-info-box{
+    padding: 0 0.3rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+}
+.header .account-info-box .head-icon{
+    width:1.46rem;
+    height: 1.46rem;
+}
+.header .account-info-box .user-id{
+    font-size: 0.45rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin:0  0.3rem;
+}
+.account-info-box .copy-icon{
+    width:0.45rem;
+    height: 0.45rem;
+    background:url(../images/copy_icon.png)no-repeat;
+    background-size: 100% 100%;
+    display: block;
+}
+.account-balance-box{
+    padding-left: 0.3rem;
+    margin-top: 0.2rem;
+}
+.account-balance-box .account-title{
+    font-size: 0.45rem;
+}
+.account-balance-box .account-balance{
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+.content .recharge-type{
+    background: #ffffff;
+    padding: 0.2rem;
+    box-sizing: border-box;
+}
+.content .recharge-type li{
+    width:100%;
+    height: 1.3rem;
+    border-bottom: 1px solid #d6d6da;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    color: #666;
+    font-size: 0.35rem;
+    font-weight: bold;
+}
+.content .recharge-type li:last-child{
+    border: none;
+}
+.content  .recharge-type li .card-icon,.content  .recharge-type li .hf-icon,.balance-recharge li .phone-icon,.balance-recharge li .yzm-icon,.balance-recharge li .money-icon{
+    display: block;
+    width:0.6rem;
+    height: 0.66rem;
+    background: url(../images/blank_record.png)no-repeat;
+    background-size: 100% 100%;
+}
+.content  .recharge-type li .pay-name,.content  .balance-recharge li .pay-name {
+    margin-left: 0.2rem;
+}
+
+.content  .recharge-type li .pay-no-select{
+    width:0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background: #e5e5e5;
+    margin-right: 0.2rem;
+    margin-left: auto;
+}
+.content  .recharge-type li.select .pay-no-select{
+    background: #1B82D1;
+}
+.content .pay-type-title{
+    width:100%;
+    height: 0.8rem;
+    line-height: 0.8rem;
+    font-size: 0.35rem;
+    color: #999999;
+    padding: 0 2.5%;
+    box-sizing: border-box;
+}
+.balance-recharge{
+    background: #ffffff;
+    padding: 0 0.2rem;
+    box-sizing: border-box;
+}
+.balance-recharge li{
+    width:100%;
+    height: 1.3rem;
+    border-bottom: 1px solid #d6d6da;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    color: #666;
+    font-size: 0.35rem;
+    font-weight: bold;
+}
+.balance-recharge li:last-child{
+    border: none;
+}
+.balance-recharge li .input-phone,.balance-recharge li .input-yzm,.balance-recharge li .input-num{
+    width:60%;
+    height: 90%;
+    border: 0;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0);
+    margin-left: 0.5rem;
+}
+.balance-recharge li .input-yzm{
+    width: 20%;
+}
+.balance-recharge li .input-num{
+    margin-left: 0.85rem;
+}
+.balance-recharge li  .yzm-box{
+    width:2.4rem;
+    height: 0.8rem;
+    margin-left: auto;
+    margin-right: 0.2rem;
+    box-sizing: border-box;
+    border: 1px solid #1B82D1;
+    border-radius: 0.1rem;
+    color: #1B82D1;
+    line-height: 0.8rem;
+    text-align: center;
+    font-size: 0.3rem;
+}
+.fast-select{
+    padding:0 0.1rem;
+    background: #ffffff;
+    height: 2.8rem;
+    width:100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.fast-select li{
+    float: left;
+    width:33.3%;
+    margin-top: 0.3rem;
+}
+.fast-select li span{
+    display: block;
+    width:2.4rem;
+    height: 0.8rem;
+    box-sizing: border-box;
+    border: 2px solid #d6d6da;
+    text-align: center;
+    line-height: 0.8rem;
+    color: #999999;
+    font-size: 0.3rem;
+}
+.fast-select li:nth-child(2){
+    display: flex;
+    justify-content: center;
+}
+.fast-select li:nth-child(3n){
+    display: flex;
+    justify-content: flex-end;
+}
+.fast-select li:nth-child(5){
+    display: flex;
+    justify-content: center;
+}
+.fast-select li.active span{
+    border: 2px solid #1B82D1;
+    color: #1B82D1;
+}
+.pay-btn-box2{
+    margin: 1rem 0 0 ;
+    width:100%;
+    height: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.occupy{
+    width:100%;
+    height:1rem ;
+}
+.pay-btn-box .pay-btn, .pay-btn-box2 .pay-btn{
+    display: block;
+    width:90%;
+    height: 100%;
+    border-radius: 0.18rem;
+    background: #1B82D1;
+    color: #ffffff;
+    font-size: 0.36rem;
+    text-align: center;
+    line-height: 1.2rem;
+}
+ .pay-btn-box{
+    position: absolute;
+    bottom: 0.5rem;
+    width:100%;
+    height: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ .occupy-screen{
+     position: absolute;
+     top:0;
+     left: 0;
+     width: 100vw;
+     height: 100vh;
+     z-index: -99999;
+     background: transparent;
+ }

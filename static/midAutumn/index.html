@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>棋盘大冒险</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="blank">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="full-screen" content="yes">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link href="./style/css/reset.css" rel="stylesheet">
+    <link href="./style/css/index.css" rel="stylesheet">
+    <script src="./style/js/jquery-1.11.1.min.js"></script>
+    <script src="./style/js/common.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="activity-top-bg">
+        <div class="activity-title-box">
+            <div class="activity-data">
+                <span>活动时间：2019-09-13 至 2019-09-20</span>
+            </div>
+        </div>
+        <div class="game-content-box js-begin">
+            <a href="javascript:;" class="moon-cake-item">
+
+            </a>
+            <a href="javascript:;" class="moon-cake-item">
+
+            </a>
+            <a href="javascript:;" class="moon-cake-item">
+
+            </a>
+        </div>
+        <div class="game-num">
+            <p>还可以吃<span>2</span>块哦~</p>
+        </div>
+    </div>
+    <div class="act-middle-bg">
+        <div class="activity-title-img">丰厚奖品任你拿</div>
+        <div class="reward-display-box">
+            <div class="reward-display_">
+                <div class="reward-display-content">
+                    <ul class="reward-list">
+                        <li class="reword-item">
+                            <i class="reward-img reward-img-1"></i>
+                            <span class="reward-name">5元无门槛</span>
+                        </li>
+                        <li class="reword-item">
+                            <i class="reward-img reward-img-2"></i>
+                            <span class="reward-name">充30减8</span>
+                        </li>
+                        <li class="reword-item">
+                            <i class="reward-img reward-img-3"></i>
+                            <span class="reward-name">华为手机</span>
+                        </li>
+                        <li class="reword-item">
+                            <i class="reward-img reward-img-4"></i>
+                            <span class="reward-name">天猫精灵</span>
+                        </li>
+                        <li class="reword-item">
+                            <i class="reward-img reward-img-5"></i>
+                            <span class="reward-name">空气净化器</span>
+                        </li>
+                        <li class="reword-item">
+                            <i class="reward-img reward-img-6"></i>
+                            <span class="reward-name">蓝牙耳机</span>
+                        </li>
+                        <li class="reword-item">
+                            <i class="reward-img reward-img-7"></i>
+                            <span class="reward-name">10元无门槛</span>
+                        </li>
+                        <li class="reword-item">
+                            <i class="reward-img reward-img-8"></i>
+                            <span class="reward-name">充98减30</span>
+                        </li>
+                        <li class="reword-item">
+                            <i class="reward-img reward-img-9"></i>
+                            <span class="reward-name">充198减50</span>
+                        </li>
+                        <li class="reword-item">
+                            <i class="reward-img reward-img-10"></i>
+                            <span class="reward-name">魔方插座</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="reward-record-box">
+            <div class="reward-record-content">
+                <div class="reward-record">
+                    <div class="reward-record-title"></div>
+                    <if condition="!session('user_auth.user_id')">
+                        <!--未登录-->
+                        <div class="no-login">
+                            <p><a style="color:#ffeb3b;" href="javascript:;" id="login">登录</a>后查看</p>
+                        </div>
+                        <else/>
+
+                        <div  style="width:100%;height:100%;">
+                            <div class="no-record-list" style="display: none">
+                                <img src="./style/images/gift.png">
+                                <p>您还没有获得任何奖励</p>
+                                <p>快点参与活动吧！</p>
+                            </div>
+                            <ul class="record-list js-record-list" style="display: block">
+                                <li>
+                                    <span class="reward-name">充98减30</span>
+                                    <span class="reward-status">已发放</span>
+                                    <span class="reward-date">2019-08-09 14:33</span>
+                                    <span class="reward-way">免费赠送</span>
+                                </li>
+                                <li>
+                                    <span class="reward-name">充98减30</span>
+                                    <span class="reward-status no-receive">未发放</span>
+                                    <span class="reward-date">2019-08-09 14:33</span>
+                                    <span class="reward-way">抽奖</span>
+                                </li>
+                                <li>
+                                    <span class="reward-name">充98减30</span>
+                                    <span class="reward-status">已发放</span>
+                                    <span class="reward-date">2019-08-09 14:33</span>
+                                    <span class="reward-way">免费赠送</span>
+                                </li>
+                                <li>
+                                    <span class="reward-name">充98减30</span>
+                                    <span class="reward-status">已发放</span>
+                                    <span class="reward-date">2019-08-09 14:33</span>
+                                    <span class="reward-way">免费赠送</span>
+                                </li>
+                                <li>
+                                    <span class="reward-name">充98减30</span>
+                                    <span class="reward-status">已发放</span>
+                                    <span class="reward-date">2019-08-09 14:33</span>
+                                    <span class="reward-way">免费赠送</span>
+                                </li>
+                                <li>
+                                    <span class="reward-name">充98减30</span>
+                                    <span class="reward-status">已发放</span>
+                                    <span class="reward-date">2019-08-09 14:33</span>
+                                    <span class="reward-way">免费赠送</span>
+                                </li>
+                                <li>
+                                    <span class="reward-name">充98减30</span>
+                                    <span class="reward-status">已发放</span>
+                                    <span class="reward-date">2019-08-09 14:33</span>
+                                    <span class="reward-way">免费赠送</span>
+                                </li>
+                                <li>
+                                    <span class="reward-name">充98减30</span>
+                                    <span class="reward-status">已发放</span>
+                                    <span class="reward-date">2019-08-09 14:33</span>
+                                    <span class="reward-way">免费赠送</span>
+                                </li>
+                                <li>
+                                    <span class="reward-name">充98减30</span>
+                                    <span class="reward-status">已发放</span>
+                                    <span class="reward-date">2019-08-09 14:33</span>
+                                    <span class="reward-way">免费赠送</span>
+                                </li>
+                                <li>
+                                    <span class="reward-name">充98减30</span>
+                                    <span class="reward-status">已发放</span>
+                                    <span class="reward-date">2019-08-09 14:33</span>
+                                    <span class="reward-way">免费赠送</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </if>
+                </div>
+                <div class="activity-rules">
+                    <p class="rule-title">活动规则：</p>
+                    <p class="rule-item">1.本活动仅限官方玩家参与；</p>
+                    <p class="rule-item">2.每日登录平台或游戏内，每充值累积满50元都可获得1次抽奖机会，活动期间抽奖机会累计；</p>
+                    <p class="rule-item">3.获得实物奖励的玩家，请于9月20日24点前正确填写自己的收货地址，否则视为自动弃权；</p>
+                    <p class="rule-item">4.累积金额按游戏内实际消费金额计算。（例如，小明充值50元使用了15元优惠券，则实际支付金额以35元为准。）</p>
+                    <p class="rule-item">5.仅限在游戏内使用微信和支付宝消费，如果使用混合支付，则扣除平台币支付部分再进行计算。</p>
+                </div>
+            </div>
+            <div class="tips">*图片仅供参考，获得礼品以实物为准</div>
+        </div>
+        <div class="activity-title-img margin-tb">礼上加礼，充值返现</div>
+        <div class="coupon-display-box">
+            <div class="coupon-display-content">
+                <ul class="coupon-list">
+                    <li class="coupon-item">
+                        <div class="coupon-content">
+                            <div class="return-num">6<span class="percentage">%</span></div>
+                            <div class="recharge-num">
+                                <p>优惠券</p>
+                                <p>满100元</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="coupon-item">
+                        <div class="coupon-content">
+                            <div class="return-num">7<span class="percentage">%</span></div>
+                            <div class="recharge-num">
+                                <p>优惠券</p>
+                                <p>满200元</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="coupon-item">
+                        <div class="coupon-content">
+                            <div class="return-num">8<span class="percentage">%</span></div>
+                            <div class="recharge-num">
+                                <p>优惠券</p>
+                                <p>满500元</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="coupon-item">
+                        <div class="coupon-content">
+                            <div class="return-num">9<span class="percentage">%</span></div>
+                            <div class="recharge-num">
+                                <p>优惠券</p>
+                                <p>满1000元</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="coupon-item">
+                        <div class="coupon-content">
+                            <div class="return-num">10<span class="percentage">%</span></div>
+                            <div class="recharge-num">
+                                <p>优惠券</p>
+                                <p>满2000元</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="coupon-item">
+                        <div class="coupon-content">
+                            <div class="return-num">12<span class="percentage">%</span></div>
+                            <div class="recharge-num">
+                                <p>优惠券</p>
+                                <p>满5000元</p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="coupon-get-rules">
+                <p class="rule-title">活动规则：</p>
+                <p class="rule-item">1.活动期间仅累积实付金额，使用平台币/优惠券等部分不参与累积；</p>
+                <p class="rule-item">2.活动档位不累积获得，活动结束后，仅可获得最高档位的优惠券；</p>
+                <p class="rule-item">3.活动奖励将在三个工作日内发放，请在个人中心优惠券内查询；</p>
+                <p class="rule-item">4.没有收到的玩家可以联系客服进行查询，官方客服微信：zggz100;</p>
+            </div>
+        </div>
+        <div class="activity-title-img margin-tb">中秋大礼包，免费送</div>
+        <div class="reward-lq-box">
+            <div class="reward-lq-content">
+            <div class="lq-content">
+                <p class="lq-title">领取方式：</p>
+                <p>
+                 添加客服微信：<span style="color: #FF7F32">zggz100 &nbsp;</span>或<span style="color: #FF7F32">&nbsp; 扫描右侧二维码</span>
+                </p>
+                <p>填写自己的ID，即可获得中秋大礼包一份哦~</p>
+            </div>
+            <div class="ewm-img"><img src="./style/images/kf.jpg" >
+                <p>识别二维码  领好礼</p>
+            </div>
+            </div>
+        </div>
+    </div>
+    <div class="act-bottom-bg">
+        <span>本次活动最终解释权归一牛游戏所有</span>
+    </div>
+</div>
+    <a href="javascript:;" style="display: none;" class="hbtn right table login jslogin"><span class="table-cell"><i class="">登录</i></span></a>
+<!--中奖弹窗-->
+<div class="prize-box-bg" id="prize-box" style="display: none">
+    <div class="table">
+        <div class="table-cell">
+            <div class="prize-content">
+                <a href="javascript:;" class="receive-btn js-receive-btn">
+
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--填写地址弹窗-->
+<div class="address_bg" style="display: none">
+    <div class="table">
+        <div class="table-cell">
+            <div class="address_box">
+                <div class="address_content">
+                    <div class="form_title">请填写收货信息</div>
+                    <div class="form_content">
+                        <form id="addressInfo">
+                            <div class="w_item" id="distpicker">
+                                <label class="w_label">
+                                    <span style="color: #ff0000">*</span>
+                                    地址信息
+                                </label>
+                                <select id="province" type="mobile" name="province" data-province="所在省" class="s_area"></select>
+                                <select id="city" type="mobile" name="city" data-city="所在市" class="s_area"></select>
+                                <select id="district" type="mobile" name="district" data-district="所在区/县" class="s_area"></select>
+                            </div>
+                            <div class="w_item hg">
+                                <label class="w_label">
+                                    <span style="color: #ff0000">*</span>
+                                    详细地址
+                                </label>
+                                <textarea type="text" class="w_input w_text" name="address_detail" id="address_detail" placeholder="请输入详细地址信息，如果地址有误，将无法正常发放奖品" ></textarea>
+                            </div>
+                            <div class="w_item">
+                                <label class="w_label">
+                                    <span style="color: #ff0000">*</span>
+                                    收货人姓名
+                                </label>
+                                <input type="text" class="w_input" name="name" id="name" placeholder="长度不超过25个字符" />
+                            </div>
+                            <div class="w_item no_mg_bot">
+                                <label class="w_label">
+                                    <span style="color: #ff0000">*</span>
+                                    手机号码
+                                </label>
+                                <input type="text" class="w_input" name="phone" id="phone" placeholder="请输入手机号码"  />
+                            </div>
+                            <div class="w_item error">
+                                <div class="pop-error error">
+                                </div>
+                            </div>
+                    		<input type="hidden" id="record_id" name="record_id" value="0">
+                        </form>
+                        <div class="tip_text">
+                            <p>1、实物奖品我们将在9月21日统一发出，9月20日24:00前仍未填写收货地址则视为自动弃权。</p>
+                            <p>2、由于物流原因，请玩家耐心等待收货，如果10个工作日仍没有收到，请与一牛客服联系。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn_finish" data-record="0">
+                    <a href="javascript:;" class="js-add-address">
+                        <img src="./style/images/btn_finish.png">
+                    </a>
+                </div>
+                <div class="btn_close js-close-address">
+                    <a href="javascript:;">
+                        <img src="./style/images/close.png">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="./style/js/distpicker.data.min.js"></script>
+<script src="./style/js/distpicker.min.js"></script>
+<script>
+    $(function () {
+        //登录弹窗
+        $('#login').click(function () {
+            if(!parseInt($user)>0){
+                $('.jslogin').click();
+            }
+        });
+        var reward_id=0;
+        //关闭填写地址弹窗
+        $(".js-close-address").click(function () {
+            $('.address_bg').hide()
+        });
+        //点击中奖领取按钮
+        $('.js-receive-btn').click(function () {
+            $("#prize-box").fadeOut().find(".prize-content div").remove();
+            if(reward_id==2 || reward_id==5 || reward_id==7 || reward_id==9 || reward_id ==10){
+                $('.address_bg').show()
+            }else {
+                layer.msg("领取成功");
+            }
+        });
+        $('.no-receive').click(function(){
+            $('#record_id').val($(this).data('record_id'));
+            $('.address_bg').show();
+        });
+        //选择省市区
+        $("#distpicker").distpicker({
+            autoSelect: false
+        });
+
+        //收货地址提交
+        $('.js-add-address').click(function () {
+            var province= $('#province').val();
+            var city= $('#city').val();
+            var district= $('#district').val();
+            var address_detail=$('#address_detail').val();
+            var name=$('#name').val();
+            var phone=$('#phone').val();
+            if(!province){
+                $('.pop-error').stop(true).fadeIn(200).text('请选择所在省');
+                return false
+            }
+            if(!city){
+                $('.pop-error').stop(true).fadeIn(200).text('请选择所在市');
+                return false
+            }
+            if(!district){
+                $('.pop-error').stop(true).fadeIn(200).text('请选择所在区/县');
+                return false
+            }
+            if(!address_detail){
+                $('.pop-error').stop(true).fadeIn(200).text('请输入详情地址信息');
+                return false
+            }
+            if(!name){
+                $('.pop-error').stop(true).fadeIn(200).text('请输入收货人姓名');
+                return false
+            }
+            if(!phone){
+                $('.pop-error').stop(true).fadeIn(200).text('请输入手机号码');
+                return false
+            }
+            if (!(/^1[3456789]\d{9}$/.test(phone))) {
+                $('.pop-error').stop(true).fadeIn(200).text('请输入正确的手机号码');
+                return false
+            }
+            $('.pop-error').fadeOut();
+
+            var data=$('#addressInfo').serialize();
+            $.ajax({
+                type: 'post',
+                url: '{:U("get_auguest_prize")}',
+                async: false,
+                data: data,
+                dataType: 'json',
+                success: function(data) {
+                    if(data.status==1){
+                        layer.msg(data.msg);
+                        $('.address_bg').hide();
+                    }else{
+                        layer.msg(data.msg);
+                    }
+                }
+            });
+            console.log(data)
+        });
+
+        $user = "{:is_login()}";
+        $('.js-begin a').click(function () {
+            if(!parseInt($user)>0){
+                layer.msg("请先登录")
+            }else {
+                reward_id = Math.floor(Math.random()*10+1);
+                reward(reward_id)
+            }
+        });
+
+        function reward(val) {
+            var result='';
+            $('.reward-content').remove();
+            switch (val){
+
+                case 1:
+                    result+='<div class="reward-content"><img src="./style/images/five_.png" class="reward-img"><span>5元无门槛</span></div>';
+                    $('.prize-content').append(result);
+                    $('#prize-box').delay(500).fadeIn();
+                    break;
+                case 2:
+                    result+='<div class="reward-content"><img src="./style/images/ly_.png" class="reward-img"><span>蓝牙耳机</span></div>';
+                    $('.prize-content').append(result);
+                    $('#prize-box').delay(500).fadeIn();
+                    break;
+                case 3:
+                    result+='<div class="reward-content"><img src="./style/images/ba_.png" class="reward-img"><span>充30减8</span></div>';
+                    $('.prize-content').append(result);
+                    $('#prize-box').delay(500).fadeIn();
+                    break;
+                case 4:
+                    result+='<div class="reward-content"><img src="./style/images/ten_.png" class="reward-img"><span>10元无门槛</span></div>';
+                    $('.prize-content').append(result);
+                    $('#prize-box').delay(500).fadeIn();
+                    break;
+                case 5:
+                    result+='<div class="reward-content"><img src="./style/images/jhq_.png" class="reward-img"><span>华为手机</span></div>';
+                    $('.prize-content').append(result);
+                    $('#prize-box').delay(500).fadeIn();
+                    break;
+                case 6:
+                    result+='<div class="reward-content"><img src="./style/images/sa_.png" class="reward-img"><span>充98减30</span></div>';
+                    $('.prize-content').append(result);
+                    $('#prize-box').delay(500).fadeIn();
+                    break;
+                case 7:
+                    result+='<div class="reward-content"><img src="./style/images/tainmao_.png" class="reward-img"><span>天猫精灵</span></div>';
+                    $('.prize-content').append(result);
+                    $('#prize-box').delay(500).fadeIn();
+                    break;
+                case 8:
+                    result+='<div class="reward-content"><img src="./style/images/ws_.png" class="reward-img"><span>充198减50</span></div>';
+                    $('.prize-content').append(result);
+                    $('#prize-box').delay(500).fadeIn();
+                    break;
+                case 9:
+                    result+='<div class="reward-content"><img src="./style/images/jhq2.png" class="reward-img"><span>空气净化器</span></div>';
+                    $('.prize-content').append(result);
+                    $('#prize-box').delay(500).fadeIn();
+                    break;
+                case 10:
+                    result+='<div class="reward-content"><img src="./style/images/mf_.png" class="reward-img"><span>魔方插座</span></div>';
+                    $('.prize-content').append(result);
+                    $('#prize-box').delay(500).fadeIn();
+                    break;
+            }
+        }
+    })
+</script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+<script type="text/javascript">
+var appId = "{$signPackage['appId']}",
+timestamp = "{$signPackage['timestamp']}",
+nonceStr = "{$signPackage['nonceStr']}",
+signature = "{$signPackage['signature']}";
+var title = "{$shareparams['title']}",
+desc = "{$shareparams['desc']}",
+imgUrl = "{$shareparams['imgUrl']}",
+link = "{$shareparams['link']}";
+try{
+	//微信分享
+	wx.config({
+	    debug: false,
+	    appId: appId,
+	    timestamp: timestamp,
+	    nonceStr: nonceStr,
+	    signature: signature,
+	    jsApiList: [
+	        // 所有要调用的 API 都要加到这个列表中
+	        'checkJsApi',
+	        'openLocation',
+	        'getLocation',
+	        'onMenuShareTimeline',
+	        'onMenuShareAppMessage',
+	        'startRecord',
+	        'stopRecord',
+	        'playVoice',
+	        'downloadVoice',
+	        'uploadVoice',
+	        'onMenuShareQQ',
+	      ]
+	});
+	wx.ready(function () {
+	  // config信息验成功
+	  wx.checkJsApi({
+	      jsApiList: [
+	          'getLocation',
+	          'onMenuShareTimeline',
+	          'onMenuShareAppMessage',
+	          'startRecord',
+	          'stopRecord',
+	          'playVoice',
+	          'downloadVoice',
+	          'uploadVoice',
+	          'onMenuShareQQ',
+	      ],
+	      success: function (res) {
+	      },error:function(res){
+	      }
+	  });
+	  share(title,link,imgUrl,desc);
+	});
+	function share(title,link,imgUrl,desc,e){
+	  //分享到朋友
+	    wx.onMenuShareAppMessage({
+	        title:  title, // 分享标题
+	        desc:   desc, // 分享描述
+	        link:   link, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+	        imgUrl: imgUrl, // 分享图标
+	        type: '', // 分享类型,music、video或link，不填默认为link
+	        dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+	        success: function () { 
+	        },
+	        cancel: function () { 
+	        }
+	    });
+	    //分享到朋友圈
+	    wx.onMenuShareTimeline({
+	        title: title, // 分享标题
+	        link: link, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+	        imgUrl: imgUrl, // 分享图标
+	        success: function () { 
+	        },
+	        cancel: function () { 
+	        }
+	    });
+	    //分享到QQ
+	    wx.onMenuShareQQ({
+	        title: title, // 分享标题
+	        desc: desc, // 分享描述
+	        link: link, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+	        imgUrl: imgUrl, // 分享图标
+	        success: function () { 
+	        },
+	        cancel: function () { 
+	        }
+	    });
+	}
+}catch(err){
+
+}
+</script>
+</body>
+</html>

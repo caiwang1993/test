@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+
+		<title>端午节抽奖活动页</title>
+
+		<link rel="stylesheet" href="style/css/index.css" type="text/css">
+	</head>
+
+	<body>
+		<div class="bg_img">
+			<div class="turntable-bg">
+				<div class="pointer"><img src="style/images/btn_start_main.png" alt="pointer"></div>
+				<div class="rotate"><img id="rotate" src="style/images/img_main_10.png" alt="turntable"></div>
+			</div>
+		</div>
+
+
+		<script type="text/javascript" src="style/js/jquery-1.11.1.min.js"></script>
+		<script type="text/javascript" src="style/js/flexible.js"></script>
+		<script type="text/javascript" src="style/js/awardRotate.js"></script>
+
+		<script type="text/javascript">
+			$(function() {
+				/*抽奖转盘*/
+				var rotateTimeOut = function() {
+					$('#rotate').rotate({
+						angle: 0,
+						animateTo: 2160,
+						duration: 8000,
+						callback: function() {
+							alert('网络超时，请检查您的网络设置！');
+						}
+					});
+				};
+				var bRotate = false;
+				var rotateFn = function(awards, angles, txt) {
+					bRotate = !bRotate;
+					$('#rotate').stopRotate();
+					$('#rotate').rotate({
+						angle: 0,
+						animateTo: angles + 1800,
+						duration: 5000,
+						callback: function() {
+							prompts(txt);
+							bRotate = !bRotate;
+						}
+					})
+				};
+
+				function prompts(result) {
+					$('.layer_bg').show();
+					$('.layer_top').after(result);
+					$('.btn_close').click(function() {
+						$(this).closest('.layer_bg').hide();
+						$(this).siblings('.layer_box_normal').remove();
+						$('.close_gift').remove();
+					});
+					$('.btn_nowin').click(function() {
+						$(this).closest('.layer_bg').hide();
+						$(this).closest('.layer_box_normal').remove();
+						$('.close_gift').remove();
+					});
+				}
+
+				function noWin() {
+					$('.layer_top').after("<div class='layer_box_normal layer_box_nowin'><a href='javascript:;' class='btn_nowin'></a></div><a href='javascript:;' class='btn_close close_gift'></a>");
+				}
+
+				function firstPrize(record_id) {
+					$('.layer_top').after("<div class='layer_box_normal layer_box_win'><img src='__VIEW__/Activity/duanwu_2018/style/images/img_01.png'/><p>游戏手办</p><a href='javascript:;' class='btn_win2' prize='"+record_id+"' id='prize"+record_id+"'></a></div><a href='javascript:;' class='btn_close close_gift'></a>");
+				}
+
+				function secondPrize(record_id) {
+					$('.layer_top').after("<div class='layer_box_normal layer_box_win'><img src='__VIEW__/Activity/duanwu_2018/style/images/img_02.png'/><p>降暑小风扇</p><a href='javascript:;' class='btn_win2' prize='"+record_id+"' id='prize"+record_id+"'></a></div><a href='javascript:;' class='btn_close close_gift'></a>");
+				}
+
+				function thirdPrize(record_id) {
+					$('.layer_top').after("<div class='layer_box_normal layer_box_win'><img src='__VIEW__/Activity/duanwu_2018/style/images/img_03.png'/><p>马克杯</p><a href='javascript:;' class='btn_win2' prize='"+record_id+"' id='prize"+record_id+"'></a></div><a href='javascript:;' class='btn_close close_gift'></a>");
+				}
+
+				function forthPrize(record_id) {
+					$('.layer_top').after("<div class='layer_box_normal layer_box_win'><img src='__VIEW__/Activity/duanwu_2018/style/images/img_04.png'/><p>骑战三国100元激活码</p><a href='javascript:;' class='btn_win' prize='"+record_id+"' id='prize"+record_id+"'></a></div><a href='javascript:;' class='btn_close close_gift'></a>");
+				}
+
+				function fifthPrize(record_id) {
+					$('.layer_top').after("<div class='layer_box_normal layer_box_win'><img src='__VIEW__/Activity/duanwu_2018/style/images/img_05.png'/><p>小挂件</p><a href='javascript:;' class='btn_win2' prize='"+record_id+"' id='prize"+record_id+"'></a></div><a href='javascript:;' class='btn_close close_gift'></a>");
+				}
+
+				function sixthPrize(record_id) {
+					$('.layer_top').after("<div class='layer_box_normal layer_box_win'><img src='__VIEW__/Activity/duanwu_2018/style/images/img_06.png'/><p>骑战三国50元激活码</p><a href='javascript:;' class='btn_win' prize='"+record_id+"' id='prize"+record_id+"'></a></div><a href='javascript:;' class='btn_close close_gift'></a>");
+				}
+
+				$('.pointer').click(function() {
+					if(bRotate) return;
+					$.ajax({
+						type: 'post',
+						url: '{:U("duanwu_2018")}',
+						async: false,
+						dataType: 'json',
+						success: function(data) {
+							if(data.status==1){
+								var item = data.data;
+								var record_id = data.record_id;
+								$('#remain_num').html(data.lastnumber);
+								$('#join_num').html(data.totalnumber);
+								$('#prize_id').html(data.record_id);
+							}else if(data.status=='-1'){
+								$('.layer_bg').show();
+								$('.layer_box_over').show();
+								$('.layer_box_over').find('span').html(data.msg);
+								$('#remain_num').html(0);
+								return false;
+							}else{
+								layer.msg(data.msg);
+								return false;
+							}
+							if(item>0){
+								var classname="gets2";
+								if(item=="4"||item=="6"){
+									classname="gets";
+								}	
+								var html = '<tr>'+
+									'<td>'+data.prize_name+'</td>'+
+									'<td>{:date("Y-m-d")}</td>'+
+									'<td>'+
+										'<a href="javascript:;" class="'+classname+'" prize="'+data.record_id+'"  id="prize'+data.record_id+'">领取</a>'+
+									'</td>'+
+									'</tr>';
+								$('#prize_list').append(html);
+							}
+							switch(item) {
+								case 0:
+									rotateFn(0, 337, noWin());
+									break;
+								case 1:
+									rotateFn(1, 26, firstPrize(record_id));
+									break;
+								case 2:
+									rotateFn(2, 88, secondPrize(record_id));
+									break;
+								case 3:
+									rotateFn(3, 137, thirdPrize(record_id));
+									break;
+								case 4:
+									rotateFn(4, 185, forthPrize(record_id));
+									break;
+								case 5:
+									rotateFn(5, 235, fifthPrize(record_id));
+									break;
+								case 6:
+									rotateFn(6, 287, sixthPrize(record_id));
+									break;
+							}
+						}
+					});
+				});
+
+				get2 = get = true;
+				/*$('.layer_bg').on('click','.gets2,.btn_win2',function(){
+					if(!get2)return;
+					$('#prize_id').val($(this).attr('prize'));
+					$('.layer_box_normal').remove();
+					$('.close_gift').remove();
+					$('.layer_box_my').hide();
+					$('layer_top').hide();
+					$('.layer_box_info').show();
+					get2 = false;
+				});*/
+				/*$('.confirm_btn').click(function(){
+					if($('#name').val()==""){
+						alert('请输入姓名');return;
+					}
+					if($('#phone').val()==""){
+						alert('请输入手机号码');return;
+					}
+					if($('#address').val()==""){
+						alert('请输入收货地址');return;
+					}
+					$.ajax({
+						type: 'post',
+						url: '{:U("get_prize")}',
+						async: false,
+						dataType: 'json',
+						data:{id:$('#prize_id').val(),name:$('#name').val(),phone:$('#phone').val(),address:$('#address').val()},
+						success: function(data) {
+							get2 = true;
+							$('.btn_close').click();
+							if(data.status=='1'){
+								$('#prize'+$('#prize_id').val()).removeClass().addClass('hasgets').html('已领取');
+								$('.layer_box_over').find('span').html(data.data);
+							}else{
+								$('.layer_box_over').find('span').html(data.msg);
+							}
+							$('.layer_bg').show();
+							$('.layer_box_over').show();
+						}
+					});
+				});
+				$('.layer_bg').on('click','.gets,.btn_win',function(){
+			        var popmsg = $('.popmsg');
+					if(!get)return;
+					get = false;
+					var ids = $(this).attr('prize');
+					$.ajax({
+						type: 'post',
+						url: '{:U("get_prize")}',
+						async: false,
+						dataType: 'json',
+						data:{id:ids},
+						success: function(data) {
+							$('.btn_close').click();
+							get = true;
+							if(data.status=='1'){
+								 popmsg.addClass('pop-hint').html('<div class="pop-table"><div class="pop-cell"><div class="pop-box"><a href="javascript:;" class="pop-close"></a><div class="pop-content"><img class="pop-image" src="/Public/Mobile/images/pop_receive_successful.png"><div class="pop-title">领取成功！</div><div class="pop-code pop-table"><span class="pop-cell pop-input"><input type="text" readonly="" class="code pop-txt" value="'+data.data+'"></span></div><p class="pop-text">可在[我的礼包]中查看</p><a href="javascript:;" class="copy pop-btn">复制激活码</a></div></div></div></div>');
+								 popmsg.show();  
+								 popmsg.find('.pop-close').click(function() {
+			                          popmsg.hide();
+			                          return false;
+			                        });
+			                        popmsg.find('.copy').click(function() {
+			                            // //移动端复制
+			                            $(".copy").css("color", "#1f3138");
+			                            $(".copy").text('复制');
+			                            Copy($('.code').val(),$('.pop-hint .pop-btn'));
+			                          });
+									$('#prize'+ids).removeClass().addClass('hasgets').html('已领取');
+							}else{
+								$('.layer_box_over').find('span').html(data.msg);
+								$('.layer_bg').show();
+								$('.layer_box_over').show();
+							}
+						}
+					});
+				});
+				
+				
+				$('.close_over').click(function() {
+					$(this).closest('.layer_bg').hide();
+					$('.layer_box_over').hide();
+				});
+				$('.act_det').click(function() {
+					var layerBg = $(this).closest('.bg_img').siblings('.layer_bg').show();
+					layerBg.find('.layer_box_activity').show();
+					$('.close_gift').remove();
+					$('.layer_box_my').hide();
+				});
+				$('.my_award').click(function() {
+					var layerBg = $(this).closest('.bg_img').siblings('.layer_bg').show();
+					layerBg.find('.layer_box_my').show();
+					$('.close_gift').remove();
+				});
+				$('.btn_records').click(function(){
+					var layerBg = $(this).closest('.bg_img').siblings('.layer_bg').show();
+					layerBg.find('.layer_box_record').show();
+					$('.close_gift').remove();
+				});
+				$('.btn_close').click(function() {
+					$(this).closest('.layer_bg').hide();
+					$('.layer_box_activity').hide();
+					$('.layer_box_my').hide();
+					$('.layer_box_record').hide();
+					$('.layer_box_info').hide();
+					$('.layer_box_over').hide();
+					get2 = get = true;
+				});
+
+				$('.detail_act').click(function() {
+					var info = $(this).closest('.layer_box_info').hide();
+					info.siblings('.layer_box_activity').show();
+				});*/
+			});
+
+			function rnd(n, m) {
+				return Math.floor(Math.random() * (m - n + 1) + n)
+			}
+		</script>
+
+	</body>
+
+</html>

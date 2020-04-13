@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>棋盘大冒险</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="blank">
+    <meta name="full-screen" content="yes">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link href="./style/css/reset.css" rel="stylesheet">
+    <link href="./style/css/index.css" rel="stylesheet">
+    <script src="./style/js/jquery-1.11.1.min.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="activity-top-bg">
+        <div class="act-title-box">
+            <img src="./style/images/title.png">
+            <span class="title-date">活动时间：8月26日— 8月31日</span>
+        </div>
+        <div class="act-game-title">
+            <img src="./style/images/act_title.png">
+        </div>
+    </div>
+    <div class="act-middle-bg">
+        <div class="act-game-content">
+            <div class="game-bg-box">
+                <div class="game-list">
+                    <div class="user-position" id="user-move">
+                        <i class="user-icon"></i>
+                    </div>
+                    <div class="lattice prize-0 js-prize-0" data-index="0">
+                        <div class="prize-0-bg"></div>
+                    </div>
+                    <div class="lattice prize-1 js-prize-1" data-index="1">
+                        <div class="prize-1-bg">2 元</div>
+                    </div>
+                    <div class="lattice prize-2 js-prize-2" data-index="2">
+                        <div class="prize-2-bg"></div>
+                    </div>
+                    <div class="lattice prize-3 js-prize-3" data-index="3">
+                        <div class="prize-3-bg"></div>
+                    </div>
+                    <div class="lattice prize-4 js-prize-4" data-index="4">4</div>
+                    <div class="lattice prize-5 js-prize-5" data-index="5"><div class="prize-5-bg"></div></div>
+                    <div class="lattice prize-6 js-prize-6" data-index="6">6</div>
+                    <div class="lattice prize-7 js-prize-7" data-index="7">7</div>
+                    <div class="lattice prize-8 js-prize-8" data-index="8"><div class="prize-8-bg"></div></div>
+                    <div class="lattice prize-9 js-prize-9" data-index="9">9</div>
+                    <div class="lattice prize-10 js-prize-10" data-index="10">10</div>
+                    <div class="lattice prize-11 js-prize-11" data-index="11">退两格</div>
+                    <div class="lattice prize-12 js-prize-12" data-index="12">12</div>
+                    <div class="lattice prize-13 js-prize-13" data-index="13">13</div>
+                    <div class="lattice prize-14 js-prize-14" data-index="14"><div class="prize-14-bg"></div></div>
+                    <div class="lattice prize-15 js-prize-15" data-index="15">15</div>
+                    <div class="lattice prize-16 js-prize-16" data-index="16">
+                        <div class="prize-16-bg">8 元</div>
+                    </div>
+                    <div class="lattice prize-17 js-prize-17" data-index="17">17</div>
+                    <div class="lattice prize-18 js-prize-18" data-index="18">18</div>
+                    <div class="lattice prize-19 js-prize-19" data-index="19"><div class="prize-19-bg"></div></div>
+                    <div class="lattice prize-20 js-prize-20" data-index="20">20</div>
+                    <div class="lattice prize-21 js-prize-21" data-index="21">21</div>
+                    <div class="lattice prize-22 js-prize-22" data-index="22">
+                        <div class="prize-22-bg">15 元</div>
+                    </div>
+                    <div class="lattice prize-23 js-prize-23" data-index="23">23</div>
+                    <div class="lattice prize-24 js-prize-24" data-index="24"><div class="prize-24-bg"></div></div>
+                    <div class="lattice prize-25 js-prize-25" data-index="25"><div class="prize-25-bg"></div></div>
+                    <div class="lattice prize-26 js-prize-26" data-index="26">26</div>
+                    <div class="lattice prize-27 js-prize-27" data-index="27">再来一次</div>
+                    <div class="lattice prize-28 js-prize-28" data-index="28">28</div>
+                    <div class="lattice prize-29 js-prize-29" data-index="29">29</div>
+                    <div class="lattice prize-30 js-prize-30" data-index="30">
+                        <div class="prize-30-bg">20 元</div>
+                    </div>
+                    <div class="lattice prize-31 js-prize-31" data-index="31">31</div>
+                    <div class="lattice prize-32 js-prize-32" data-index="32"><div class="prize-32-bg"></div></div>
+                    <div class="lattice prize-33 js-prize-33" data-index="33">33</div>
+                    <div class="lattice prize-34 js-prize-34" data-index="34">34</div>
+                    <div class="lattice prize-35 js-prize-35" data-index="35"><div class="prize-35-bg"></div></div>
+                    <div class="lattice prize-36 js-prize-36" data-index="36">36</div>
+                    <div class="lattice prize-37 js-prize-37" data-index="37">37</div>
+                    <div class="lattice prize-38 js-prize-38" data-index="38">进两格</div>
+                    <div class="lattice prize-39 js-prize-39" data-index="39">39</div>
+                    <div class="lattice prize-40 js-prize-40" data-index="40">40</div>
+                    <div class="lattice prize-41 js-prize-41" data-index="41"><div class="prize-41-bg"></div></div>
+                    <div class="lattice prize-42 js-prize-42" data-index="42">42</div>
+                    <div class="lattice prize-43 js-prize-43" data-index="43">再来一次</div>
+                    <div class="lattice prize-44 js-prize-44" data-index="44">44</div>
+                    <div class="lattice prize-45 js-prize-45" data-index="45">45</div>
+                    <div class="lattice prize-46 js-prize-46" data-index="46"><div class="prize-46-bg"></div></div>
+                    <div class="lattice prize-47 js-prize-47" data-index="47">47</div>
+                    <div class="lattice prize-48 js-prize-48" data-index="48">48</div>
+                    <div class="lattice prize-49 js-prize-49" data-index="49"><div class="prize-49-bg"></div></div>
+                    <div class="lattice prize-50 js-prize-50" data-index="50">
+                        <div class="prize-50-bg">100 元</div>
+                    </div>
+                    <div class="lattice prize-51 js-prize-51" data-index="51">
+                        <div class="prize-51-bg-1"></div>
+                        <div class="prize-51-bg-2"></div>
+                    </div>
+                </div>
+                <div class="rotary-box">
+                    <img src="./style/images/pd.png" class="zp-pic-1">
+
+                    <div class="zp-pic-2-box" id="lotteryBtn">
+                        <img  src="./style/images/zz.png" class="zp-pic-2">
+                    </div>
+                    <span class="lattice-box">剩余<span class="lattice-num">0</span>次</span>
+                </div>
+                <div class="act-game-tips">* 图片仅供参考，获得礼品以实物为准</div>
+            </div>
+        </div>
+        <div class="act-reward-record">
+            <img src="./style/images/bt.png" class="record-title">
+
+             <div class="record-list js-record-list">
+                 <div class="no-record-list">
+                     <img src="./style/images/gift.png">
+                     <p>您还没有获得任何奖励</p>
+                     <p>快点参与活动吧！</p>
+                 </div>
+                 <ul style="display: none">
+                     <li class="reword-item">
+                         <span class="reword-name">15元平台币</span>
+                         <a href="javascript:;" class="reword-status">已发放</a>
+                         <span class="reword-date">2019-08-09 14:33</span>
+                     </li>
+                     <li class="reword-item">
+                         <span class="reword-name">15元平台币</span>
+                         <a href="javascript:;" class="reword-status no-receive">未领取</a>
+                         <span class="reword-date">2019-08-09 14:33</span>
+                     </li><li class="reword-item">
+                     <span class="reword-name">15元平台币</span>
+                     <a href="javascript:;" class="reword-status">已发放</a>
+                     <span class="reword-date">2019-08-09 14:33</span>
+                 </li><li class="reword-item">
+                     <span class="reword-name">15元平台币</span>
+                     <a href="javascript:;" class="reword-status">已发放</a>
+                     <span class="reword-date">2019-08-09 14:33</span>
+                 </li><li class="reword-item">
+                     <span class="reword-name">15元平台币</span>
+                     <a href="javascript:;" class="reword-status">已发放</a>
+                     <span class="reword-date">2019-08-09 14:33</span>
+                 </li><li class="reword-item">
+                     <span class="reword-name">15元平台币</span>
+                     <a href="javascript:;" class="reword-status">已发放</a>
+                     <span class="reword-date">2019-08-09 14:33</span>
+                 </li><li class="reword-item">
+                     <span class="reword-name">15元平台币</span>
+                     <a href="javascript:;" class="reword-status">已发放</a>
+                     <span class="reword-date">2019-08-09 14:33</span>
+                 </li><li class="reword-item">
+                     <span class="reword-name">15元平台币</span>
+                     <a href="javascript:;" class="reword-status">已发放</a>
+                     <span class="reword-date">2019-08-09 14:33</span>
+                 </li><li class="reword-item">
+                     <span class="reword-name">15元平台币</span>
+                     <a href="javascript:;" class="reword-status">已发放</a>
+                     <span class="reword-date">2019-08-09 14:33</span>
+                 </li>
+                     <li class="reword-item">
+                         <span class="reword-name">15元平台币</span>
+                         <a href="javascript:;" class="reword-status">已发放</a>
+                         <span class="reword-date">2019-08-09 14:33</span>
+                     </li>
+                     <li class="reword-item">
+                         <span class="reword-name">15元平台币</span>
+                         <a href="javascript:;" class="reword-status">已发放</a>
+                         <span class="reword-date">2019-08-09 14:33</span>
+                     </li>
+                 </ul>
+             </div>
+
+        </div>
+        <div class="act-rule-box">
+            <div class="rule-title">活动规则：</div>
+            <div class="rule-content">
+                <p>1、本活动仅限官方玩家参与；</p>
+                <p>2、充值累积满50元可以获得转盘机会一次，活动期间转盘机会可累计；</p>
+                <p>3、获得实物奖励的玩家，请于8.31日24:00前正确填写自己的收货地址，否则视为自动弃权；</p>
+                <p>4、路过终点则从起点重新开始游戏，可获得奖励重置（例如，小明停在49格子上，这时转到2，则经过50停在1上）。</p>
+                <p>5、累积金额按游戏内实际消费金额计算。（例如，小明充值50元使用了15元优惠券，则以实际支付金额35元为准）。</p>
+                <p>6、仅限在游戏内使用微信和支付宝消费，如果使用混合支付，则扣除平台币支付部分进行计算；</p>
+                <p class="author">-- 本活动最终解释权归一牛游戏所有</p>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="month" name="bday" id="bday">
+<!--中奖弹窗-->
+<div class="prize-box-bg" id="prize-box" style="display: none">
+    <div class="table">
+        <div class="table-cell">
+            <div class="prize-content">
+                <a href="javascript:;" class="receive-btn js-receive-btn">
+
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!--填写地址弹窗-->
+<div class="address_bg" style="display: none">
+    <div class="table">
+        <div class="table-cell">
+            <div class="address_box">
+                <div class="address_content">
+                    <div class="form_title">请填写收货信息</div>
+                    <div class="form_content">
+                        <form id="addressInfo">
+                            <div class="w_item" id="distpicker">
+                                <label class="w_label">
+                                    <span style="color: #ff0000">*</span>
+                                    地址信息
+                                </label>
+                                <select id="province" type="mobile" name="province" data-province="所在省" class="s_area"></select>
+                                <select id="city" type="mobile" name="city" data-city="所在市" class="s_area"></select>
+                                <select id="district" type="mobile" name="district" data-district="所在区/县" class="s_area"></select>
+                            </div>
+                            <div class="w_item hg">
+                                <label class="w_label">
+                                    <span style="color: #ff0000">*</span>
+                                    详细地址
+                                </label>
+                                <textarea type="text" class="w_input w_text" name="address_detail" id="address_detail" placeholder="请输入详细地址信息，如果地址有误，将无法正常发放奖品" ></textarea>
+                            </div>
+                            <div class="w_item">
+                                <label class="w_label">
+                                    <span style="color: #ff0000">*</span>
+                                    收货人姓名
+                                </label>
+                                <input type="number" step="1" class="w_input" name="name" id="name" placeholder="长度不超过25个字符" />
+                            </div>
+                            <div class="w_item no_mg_bot">
+                                <label class="w_label">
+                                    <span style="color: #ff0000">*</span>
+                                    手机号码
+                                </label>
+                                <input type="text" class="w_input" name="phone" id="phone" placeholder="请输入手机号码"  />
+                            </div>
+                            <div class="w_item error">
+                                <div class="pop-error error">
+                                </div>
+                            </div>
+                        </form>
+                        <div class="tip_text">
+                            <p>1、实物奖品我们将在9月2日统一发出，8月31日24:00前仍未填写收货地址则视为自动弃权。</p>
+                            <p>2、由于物流原因，请玩家耐心等待收货，如果10个工作日仍没有收到，请与一牛客服联系。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn_finish" data-record="0">
+                    <a href="javascript:;" class="js-add-address">
+                        <img src="./style/images/btn_finish.png">
+                    </a>
+                </div>
+                <div class="btn_close js-close-address">
+                    <a href="javascript:;">
+                        <img src="./style/images/close.png">
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="style/js/flexible.js"></script>
+
+
+<script src="style/js/jQueryRotate.2.2.js"></script>
+<script src="style/js/distpicker.data.min.js"></script>
+<script src="style/js/distpicker.min.js"></script>
+<script>
+    $(function () {
+        var all_step=0;//已走的步数,棋子所在位置
+        if(all_step!=0){
+            $('.js-prize-'+all_step+'').addClass("current").siblings().removeClass("current");
+            $("#user-move").addClass('prize-'+all_step).addClass("ini-position");
+        }
+        //关闭填写地址弹窗
+        $(".js-close-address").click(function () {
+            $('.address_bg').hide()
+        });
+        //选择省市区
+        $("#distpicker").distpicker({
+            autoSelect: false
+        });
+        //点击中奖领取按钮
+        $('.js-receive-btn').click(function () {
+
+            $("#prize-box").fadeOut().find(".prize-content div").remove();
+            $("#lotteryBtn").removeClass("disabled");
+            if(all_step==1 || all_step==2 || all_step==3 || all_step==8 || all_step==19 || all_step==25 || all_step==35 || all_step ==49){
+                $('.address_bg').show()
+            }
+        });
+        //收货地址提交
+        $('.js-add-address').click(function () {
+            var province= $('#province').val();
+            var city= $('#city').val();
+            var district= $('#district').val();
+            var address_detail=$('#address_detail').val();
+            var name=$('#name').val();
+            var phone=$('#phone').val();
+            if(!province){
+                $('.pop-error').stop(true).fadeIn(200).text('请选择所在省');
+                return false
+            }
+            if(!city){
+                $('.pop-error').stop(true).fadeIn(200).text('请选择所在市');
+                return false
+            }
+            if(!district){
+                $('.pop-error').stop(true).fadeIn(200).text('请选择所在区/县');
+                return false
+            }
+            if(!address_detail){
+                $('.pop-error').stop(true).fadeIn(200).text('请输入详情地址信息');
+                return false
+            }
+            if(!name){
+                $('.pop-error').stop(true).fadeIn(200).text('请输入收货人姓名');
+                return false
+            }
+            if(!phone){
+                $('.pop-error').stop(true).fadeIn(200).text('请输入手机号码');
+                return false
+            }
+            if (!(/^1[3456789]\d{9}$/.test(phone))) {
+                $('.pop-error').stop(true).fadeIn(200).text('请输入正确的手机号码');
+                return false
+            }
+            $('.pop-error').fadeOut();
+
+            var data=$('#addressInfo').serialize();
+            console.log(data)
+        });
+        var timeOut = function () {  //超时函数
+            $("#lotteryBtn").rotate({
+                angle: 0,
+                duration: 8000,
+                animateTo: 2160, //这里是设置请求超时后返回的角度，所以应该还是回到最原始的位置，2160是因为我要让它转6圈，就是360*6得来的
+                callback: function () {
+                    alert('网络超时')
+                }
+            });
+        };
+
+        var rotateFunc = function (awards, angle, text) {  //awards:奖项，angle:奖项对应的角度
+            $('#lotteryBtn').stopRotate();
+            $("#lotteryBtn").rotate({
+                angle: 180,
+                duration: 5000,
+                animateTo: angle + 1440, //angle是图片上各奖项对应的角度，1440是我要让指针旋转4圈。所以最后的结束的角度就是这样子^^
+                callback: function () {
+                    stepMove(text);
+                    reward()
+                }
+            });
+        };
+
+        $("#lotteryBtn").rotate({
+            bind: {
+                click: function () {
+                    if($(this).hasClass("disabled")) return false;
+                    var data =Math.floor(Math.random()*3 + 1);
+                    $(this).addClass("disabled");
+                    if (data == 1) {
+                        rotateFunc(1, 60, 1)
+                    }
+                    if (data == 2) {
+                        rotateFunc(2, 180, 2)
+                    }
+                    if (data == 3) {
+                        rotateFunc(3, 300, 3)
+                    }
+                }
+            }
+        });
+        function stepMove(step) {
+            pre_all_step=all_step;
+            all_step+=step;
+
+            //如果总步数大于50，那么all_step-50
+            if(all_step>50){
+                all_step=all_step-50;
+                $("#user-move").removeClass('prize-'+pre_all_step).addClass('prize-'+all_step);
+                pre_all_step=0;
+                setTimeout(function(){ removeDisabled(); },2000);
+                return false
+            }
+            console.log(step);
+            console.log("all_step:"+all_step)
+            move(pre_all_step,all_step);
+        }
+        function move(pre_all_step,all_step) {
+            if (pre_all_step==all_step){return false}
+
+            //如果总前一步>总步数 -- 后退情况
+            if(pre_all_step>all_step){
+                $('.js-prize-'+all_step+'').addClass("current").siblings().removeClass("current");
+                $("#user-move").removeClass('prize-'+pre_all_step).addClass('prize-'+(pre_all_step-1));
+                setTimeout(function(){
+                    move(pre_all_step-1,all_step)
+                },300)
+
+            }else {
+                $('.js-prize-'+all_step+'').addClass("current").siblings().removeClass("current");
+                $("#user-move").removeClass('prize-'+pre_all_step).addClass('prize-'+(pre_all_step+1));
+
+                setTimeout(function(){
+                    move(pre_all_step+1,all_step)
+                },200)
+            }
+        }
+        function removeDisabled() {
+            $("#lotteryBtn").removeClass("disabled")
+        }
+        function reward() {
+            console.log(all_step)
+            var result='';
+            switch (all_step){
+                case 4: case 6:case 7:case 9:case 10:case 12:case 13:case 15:case 17:case 18:case 20:case 21:case 23:case 26:case 28:case 29:case 31:case  33:case 34:case 36:case 37:case 39:case 40:case 42:case 44:case 45:case 47:case 48:
+                /*result+='<div>没有中奖</div>';
+                 $('.prize-content').append(result);
+                 $('#prize-box').delay(1000).fadeIn();*/
+                setTimeout(function(){ removeDisabled(); },1000);
+                break;
+                case 1:
+                    result+='<div><span>2元平台币</span></div>';
+                    $('.prize-content').append(result);
+                    $('#prize-box').delay(1000).fadeIn();
+                    break;
+                case 2:
+                    result+='<div>满6减2</div>';
+                    $('.prize-content').append(result);
+                    $('#prize-box').delay(1000).fadeIn();
+                    break;
+                case 3:
+                    result+='<div>满10减3</div>';
+                    $('.prize-content').append(result);
+                    $('#prize-box').delay(1000).fadeIn();
+                    break;
+                case 5:
+                    result+='<div>2元无门槛</div>';
+                    $('.prize-content').append(result);
+                    $('#prize-box').delay(1000).fadeIn();
+                    break;
+                case 8:
+                    result+='<div>鼠标垫</div>';
+                    $('.prize-content').append(result);
+                    $('#prize-box').delay(1000).fadeIn();
+                    break;
+                case 11:
+                    all_step-=2;
+                    setTimeout(function(){ move(all_step+2,all_step); },2000);
+                    setTimeout(function(){ removeDisabled(); },2000);
+                    break;
+                case 14:
+                    result+='<div>满30减8</div>';
+                    $('.prize-content').append(result);
+                    $('#prize-box').delay(1000).fadeIn();
+                    break;
+                case 16:
+                    result+='<div>8元平台币</div>';
+                    $('.prize-content').append(result);
+                    $('#prize-box').delay(1000).fadeIn();
+                    break;
+                case 19:
+                    result+='<div>U型枕头</div>';
+                    $('.prize-content').append(result);
+                    $('#prize-box').delay(1000).fadeIn();
+                    break;
+                case 22:
+                    result+='<div>15元平台币</div>';
+                    $('.prize-content').append(result);
+                    $('#prize-box').delay(1000).fadeIn();
+                    break;
+                case 24:
+                    result+='<div>满60减15</div>';
+                    $('.prize-content').append(result);
+                    $('#prize-box').delay(1000).fadeIn();
+                    break;
+                case 25:
+                    result+='<div>充电宝</div>';
+                    $('.prize-content').append(result);
+                    $('#prize-box').delay(1000).fadeIn();
+                    break;
+                case 27:
+                    result+='<div>再来一次</div>';
+                    $('.prize-content').append(result);
+                    $('#prize-box').delay(1000).fadeIn();
+                    break;
+                case 30:
+                    result+='<div>20元平台币</div>';
+                    $('.prize-content').append(result);
+                    $('#prize-box').delay(1000).fadeIn();
+                    break;
+                case 32:
+                    result+='<div>满98减28</div>';
+                    $('.prize-content').append(result);
+                    $('#prize-box').delay(1000).fadeIn();
+                    break;
+                case 35:
+                    result+='<div>鼠标</div>';
+                    $('.prize-content').append(result);
+                    $('#prize-box').delay(1000).fadeIn();
+                    break;
+                case 38:
+                    all_step+=2;
+                    setTimeout(function(){ move(all_step-2,all_step); },2000);
+                    setTimeout(function(){ removeDisabled(); },2000);
+                    break;
+                case 41:
+                    result+='<div>30元无门槛</div>';
+                    $('.prize-content').append(result);
+                    $('#prize-box').delay(1000).fadeIn();
+                    break;
+                case 43:
+                    result+='<div>再来一次</div>';
+                    $('.prize-content').append(result);
+                    $('#prize-box').delay(1000).fadeIn();
+                    break;
+                case 46:
+                    result+='<div>198减50</div>';
+                    $('.prize-content').append(result);
+                    $('#prize-box').delay(1000).fadeIn();
+                    break;
+                case 49:
+                    result+='<div>键鼠套装</div>';
+                    $('.prize-content').append(result);
+                    $('#prize-box').delay(1000).fadeIn();
+                    break;
+                case 50:
+                    result+='<div>100元平台币</div>';
+                    $('.prize-content').append(result);
+                    $('#prize-box').delay(1000).fadeIn();
+                    break;
+            }
+        }
+    })
+</script>
+
+</body>
+</html>

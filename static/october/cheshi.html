@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />-->
+    <title>十月活动</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+  <!--  <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="blank">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="full-screen" content="yes">-->
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <link href="./style/css/reset.css" rel="stylesheet">
+    <!--<meta name="viewport" content="user-scalable=no">-->
+
+    <script src="./style/js/jquery-1.11.1.min.js"></script>
+    <!--<script src="./style/js/common.js"></script>-->
+    <style>
+        html{
+            /*font-size: 62.5%!important;*/
+        }
+        body{
+            width:130%;
+            /*min-width: 1200px;*/
+        }
+        .balance-box{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            margin-top: 1.28rem;
+            width: 100%;
+            height: 5.8rem;
+            padding: 0 0.853rem;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+        .balance-box .ptb-balance, .balance-box .bing-balance {
+            width: 14.5rem;
+            height: 5.8rem;
+            background: #ffffff;
+            box-shadow: 0px 0px 12px 0px rgba(126,167,249,0.2);
+            border-radius: 0.426rem;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+<div class="balance-box">
+    <a href="/mobile/pay/pay.html">
+        <div class="ptb-balance">
+
+        </div>
+    </a>
+    <a href="/mobile/user/my_binding_money.html" class="ml-auto">
+        <div class="bing-balance">
+
+        </div>
+    </a>
+</div>
+<div style="width: 100%;height: 300px;background: #999999" class="div1">width:100%</div>
+<div style="width: 1400px;height: 300px;background: red" class="div2">width:360px</div>
+<div style="width: 400px;height: 300px;background: blue" class="div3">width:400px</div>
+
+<a href="weixin://">打开微信</a>
+<a href="javascript:;" class="js-third-wx">判断是否在微信打开</a>
+
+<span class="click">测试ios点击是否有效</span>
+<div class="click2" style="font-size: 30px;margin-top: 30px">
+    <span style="cursor: pointer">测试ios点击是否有效2</span>
+</div>
+
+<a href="javascript:;" style="font-size: 30px;margin-top: 30px" class="js-copy">点击复制</a>
+
+<div style="width: 20px;height: 20px;background: gold"></div>
+<div style="width: 0.6rem;height: 0.6rem;background: #26ff6d"></div>
+<script src="./style/js/jquery-1.11.1.min.js"></script>
+<script src="./style/js/layer.js"></script>
+
+<script>
+    $(function () {
+        $('body').on('click','.click2 span',function(){
+            alert(1)
+        })
+        $('.js-copy').click(function(){
+            Copy("123213")
+        });
+
+        function Copy(str) {
+            var save = function(e) {
+                e.clipboardData.setData('text/plain', str);
+                e.preventDefault();
+            }
+            document.addEventListener('copy', save);
+            document.execCommand('copy');
+            document.removeEventListener('copy', save);
+        }
+
+        //微信第三方登录
+        $('.js-third-wx').click(function () {
+            if(!isWeiXin()){
+                alert("not");
+                return false
+            }else {
+                alert("yes")
+            }
+        });
+        //判断是否是微信浏览器的函数
+        function isWeiXin(){
+            var ua = window.navigator.userAgent.toLowerCase();
+            if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+                return true;
+            }else{
+                return false;
+            }
+        }
+
+
+
+
+        /*alert(document.body.scrollWidth)
+        alert("设备独立像素（）："+window.screen.width)
+        //设备像素为设备的分辨率
+        alert("layout viewport 的宽度："+document.documentElement.clientWidth);//默认为980px，设置viewport后为设备的分辨率
+
+        alert("visual viewport 的宽度："+window.innerWidth)//去除菜单栏、工具栏、边框等占位元素后等页面的净宽高
+
+        alert("html 的宽度："+$("html").width());
+
+        alert("body 的宽度："+$("body").width());*/
+
+    });
+</script>
+<script>
+
+    window.onload = function(){
+        var bindSwiperEvent = function(dom, leftCallBack, rightCallback){
+            // 判断手势的条件
+            // 必须滑动 滑动距离超过10px
+            var isMove = false;
+            var startX = 0;
+            var distanceX = 0;
+
+            dom.addEventListener( 'touchstart', function(e){
+                startX = e.touchs[0].clientX;
+            })
+
+            dom.addEventListener('touchmove', function(e){
+                isMove = true;
+                var moveX = e.touchs[0].clientX;
+                distanceX = moveX - startX;
+            })
+
+            dom.addEventListener('touchend',function(e){
+                if(isMove && Math.abs(distanceX >= 10)){
+                    // 右滑动
+                    if(distanceX>0){
+                        rightCallback && rightCallback.call(this,e);
+                    }
+                    // 左滑动
+                    else{
+                        leftCallBack && leftCallBack.call(this,e);
+                    }
+                }
+                // 重置参数
+                isMove = false;
+                startX = 0;
+                distanceX = 0;
+            })
+        }
+
+        bindSwiperEvent( document.querySelector('.div1'), function(e){
+            console.log('左滑动')
+        }, function(e){
+            console.log('右滑动')
+        }  )
+    }
+</script>
+<script>
+    (function(doc, win) {
+        var docEl = doc.documentElement,
+            isIOS = navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/),
+            dpr = isIOS ? Math.min(win.devicePixelRatio, 3) : 1,
+            dpr = window.top === window.self ? dpr : 1, //被iframe引用时，禁止缩放
+            dpr = 1,
+            scale = 1 / dpr,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+        docEl.dataset.dpr = dpr;
+        var metaEl = doc.createElement('meta');
+        metaEl.name = 'viewport';
+        metaEl.content = 'initial-scale=' + scale + ',maximum-scale=' + scale + ', minimum-scale=' + scale;
+        docEl.firstElementChild.appendChild(metaEl);
+        var recalc = function() {
+            var width = docEl.clientWidth;
+            if (width / dpr > 1080) {
+                width = 1080 * dpr;
+            }
+            // 乘以100，px : rem = 100 : 1
+            docEl.style.fontSize = 100 * (width / 1080) + 'px';
+        };
+        recalc()
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+    })(document, window);
+</script>
+
+</body>
+</html>
