@@ -6,10 +6,7 @@
     <title>话费余额充值</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
-   <!-- <meta name="x5-orientation" content="portrait">
-    <meta name="x5-fullscreen" content="true">
-    <meta name="full-screen" content="yes">-->
-    <link href="./style/css/reset.css" rel="stylesheet">
+    <link href="style/css/reset.css" rel="stylesheet">
     <link href="style/css/recharge_phone.css" rel="stylesheet">
     <script src="./style/js/jquery-1.11.1.min.js"></script>
     <script type="text/javascript" src="./style/js/flexible.js"></script>
@@ -19,11 +16,11 @@
     <div class="header">
         <div class="header-contain">
             <a href="javascript:;">
-                <img src="./style/images/pop_pay_return.png" class="return-img">
+                <img src="style/images/pop_pay_return.png" class="return-img">
             </a>
         </div>
         <div class="account-info-box">
-            <img src="./style/images/head_icon.png" class="head-icon">
+            <img src="style/images/head_icon.png" class="head-icon">
             <span class="user-id" >ID：27136657</span>
             <a href="javascript:;" class="js-copy" data-id="27136657">
                 <i class="copy-icon"></i>
@@ -60,7 +57,6 @@
                         <span class="pay-name">PIN码</span>
                         <input placeholder="" type="text" class="input-phone js-PIN">
                     </li>
-
                 </ul>
             </div>
             <div class="pay-btn-box">
@@ -124,27 +120,12 @@
                 </a>
             </div>
         </div>
-        <div class="occupy"></div>
+
     </div>
-    <div class="occupy-screen"></div>
 </div>
 <script src="./style/js/layer/layer.js"></script>
 <script>
-
     $(function(){
-        var ua = window.navigator.userAgent;
-        if(ua.indexOf('Android') > -1 || ua.indexOf('Adr') > -1){
-            var winHeight = $(window).height(); //获取当前页面高度
-            $(window).resize(function() {
-                var thisHeight = $(this).height();
-                if (winHeight - thisHeight > 50) {
-                    $('body').css('height', winHeight + 'px');
-                } else {
-                    $('body').css('height', '100%');
-                }
-            });
-        }
-
         //复制Id
         $('.js-copy').click(function(){
             var data=$(this).data('id');
@@ -165,24 +146,24 @@
         $('.fast-select li').click(function () {
             $(this).addClass("active").siblings("li").removeClass("active");
             var val=$(this).attr("data-num");
-            $('.js-num').val(val);
+           $('.js-num').val(val);
         });
 
         // 获取手机验证码
-        $('.js-yzm').click(function() {
-            var that=$(this),parent=that.closest('.js-balance');
-            if (that.hasClass('disabled')) {return false;}
-            var phone = $.trim(parent.find('.js-phone').val());
-            if (!phone) {
-                layer.msg("请先输入手机号");
-                return false
-            }
-            if (! /^1[3456789][0-9]{9}$/.test(phone)){
-                layer.msg("请先输入正确的手机号");
-                return false
-            }
-            clock('.js-yzm');
-        });
+            $('.js-yzm').click(function() {
+                var that=$(this),parent=that.closest('.js-balance');
+                if (that.hasClass('disabled')) {return false;}
+                var phone = $.trim(parent.find('.js-phone').val());
+                if (!phone) {
+                    layer.msg("请先输入手机号");
+                    return false
+                }
+                if (! /^1[3456789][0-9]{9}$/.test(phone)){
+                    layer.msg("请先输入正确的手机号");
+                    return false
+                }
+                clock('.js-yzm');
+            });
 
     });
     function clock(ele,time) {
@@ -194,26 +175,6 @@
             t>0 || (clearInterval(a),e.removeClass('disabled').html('重新获取'));
         },1000);
     }
-
-    //构造函数demo
-    function Person(name,age,job){//构造函数
-        this.name=name;
-        this.age=age;
-        this.job=job;
-    }
-    Person.prototype={
-        constructor:Person,
-        sayName:"cw3"
-    };
-    Person.prototype.sing=function () {
-      return "我从那个歌"
-    };
-
-    var p1= new Person("cw",18,"IT");
-    console.log(p1.sing())
-    var p2= new Person("cw2",182,"IT2");
-    console.log(p2)
-
 
 </script>
 </body>
