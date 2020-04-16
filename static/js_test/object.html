@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试用不用prototype的区别</title>
+</head>
+<body>
+<script>
+    //使用prototype
+    let Test = function () {
+        this.name = 'xiaoming';
+        this.age = function () {
+            return 18
+        }
+    };
+    //使用prototype的优点是创建很多Test对象时，可以共享一个函数，节省内存
+    Test.prototype.sex = function () {
+        return "woman"
+    };
+    let child1 = new Test();
+    console.log(Test);
+    console.log(child1.name);
+    console.log(child1.sex());
+    console.log(child1.age());
+
+    //不使用prototype
+   /* let test2 = new Object();
+    test2.name='xiohong';
+    console.log(test2)*/
+</script>
+</body>
+</html>

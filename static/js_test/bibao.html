@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js-闭包</title>
+</head>
+<body>
+<div id="test1" style="text-decoration: underline">test1</div>
+<div id="test2" style="text-decoration: underline;margin-top: 20px">test2</div>
+  <!--闭包定义-->
+<script>
+    //闭包作用：1.延时执行  2.封装一个私有变量，闭包携带这个变量
+    let test1 = document.getElementById('test1');
+    test1.addEventListener('click',function () {
+        //延迟求和
+        function lazy_num(...rest) {
+            let sum = function () {
+                return rest.reduce( (x,y) => {
+                    return x+y
+                })
+            };
+            return sum;
+        }
+        //首先调用lazy_num();
+        let f = lazy_num(1,2,3,4,5);
+        console.log(f())
+        console.log(`当lazy_sum返回函数sum时，相关参数和变量都保存在返回的函数中，这种称为“闭包（Closure）”的程序结构拥有极大的威力。`)
+    })
+
+</script>
+
+<script>
+    let test2 = document.getElementById('test2');
+    test2.addEventListener('click',function () {
+        function count() {
+            let arr = [];
+            for (var i=1; i<=3; i++) {
+                arr.push(function () {
+                    return i * i;
+                });
+            }
+            return arr;
+        }
+
+        let results = count();
+        console.log(results);
+        let f1 = results[0]; //16
+        let f2 = results[1]; //16
+        let f3 = results[2];  //16
+
+        console.log(`返回闭包时牢记的一点就是：返回函数不要引用任何循环变量，或者后续会发生变化的变量。`)
+    });
+
+</script>
+</body>
+</html>

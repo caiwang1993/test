@@ -51,12 +51,23 @@
 <!--炫酷背景-->
 <!--pop弹窗-->
 <a href="javascript:;" style="color: green" class="click_me">点击打开弹窗</a>
+
+<div class="ios-click" style="margin-top: 200px">
+    <span>safari浏览器点击</span>
+</div>
 <!--pop弹窗-->
 <div class="pop"></div>
 <script src="style/js/jquery-1.11.1.min.js"></script>
 <script src="style/js/cw-pop-1.0.min.js"></script>
 
+
 <script>
+    $(".ios-click span").click(function () {
+        alert(123)
+    })
+
+
+
     let pop = $(".pop").pop({speed:'1000'});
     $('.click_me').click(function () {
        pop.open('','tips-pop','<a href="javascript:;">确定</a><a href="javascript:;" class="close">关闭</a>')

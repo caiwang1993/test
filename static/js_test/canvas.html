@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas</title>
+</head>
+<body>
+<canvas id="test-canvas" width="300" height="150" style="border: 1px solid #e0e0e0"></canvas>
+<canvas id="test-canvas2" width="300" height="150" style="border: 1px solid #e0e0e0"></canvas>
+<script type="text/javascript">
+    let canvas = document.getElementById('test-canvas');
+    let ctx = canvas.getContext('2d');
+    ctx.clearRect(0,0,200,200); //擦除（0,0）位置大小为200*200的矩形，擦除的意思是把该区域变成透明
+    ctx.fillStyle = '#dddddd';  //设置颜色
+    ctx.fillRect(10,10,130,130); //把（10,10）位置大小为130*130的矩形涂色
+
+    let path = new Path2D();
+    path.arc(75, 75, 50, 0, Math.PI*2, true);
+    path.moveTo(110,75);
+    path.arc(75, 75, 35, 0, Math.PI, false);
+    path.moveTo(65, 65);
+    path.arc(60, 65, 5, 0, Math.PI*2, true);
+    path.moveTo(95, 65);
+    path.arc(90, 65, 5, 0, Math.PI*2, true);
+    ctx.strokeStyle = '#0000ff';
+    ctx.stroke(path);
+</script>
+<script type="text/javascript">
+    let canvas2 = document.getElementById('test-canvas2');
+    let ctx2 = canvas2.getContext('2d');
+    ctx2.clearRect(0,0,canvas2.width,canvas2.height);
+    ctx2.shadowOffsetX = 2;
+    ctx2.shadowOffsetY = 2;
+    ctx2.shadowBlur = 2;
+    ctx2.shadowColor = '#ff0000';
+    ctx2.font = '24px Arial';
+    ctx.fillStyle="#333333";
+    ctx2.fillText('Canvas字体阴影',20,40)
+</script>
+</body>
+</html>

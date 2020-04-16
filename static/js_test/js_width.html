@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS中关于clientWidth offsetWidth scrollWidth 等的含义</title>
+</head>
+<body>
+<div id="test" style="color:red;"></div>
+<div id="cnblogs_post_body" class="blogpost-body ">
+    <p><img title="JS中关于clientWidth&nbsp;<wbr>offsetWidth&nbsp;<wbr>scrollWidth&nbsp;<wbr>等鈥" src="./img/0928300.gif" alt="" name="image_operate_30291315188919898" width="609" height="602" border="0"></p>
+    <p>网页可见区域宽： document.body.clientWidth;<br>网页可见区域高： document.body.clientHeight;<br>网页可见区域宽： document.body.offsetWidth&nbsp;&nbsp;&nbsp;(包括边线的宽);<br>网页可见区域高： document.body.offsetHeight&nbsp;&nbsp;(包括边线的宽);<br>网页正文全文宽： document.body.scrollWidth;<br>网页正文全文高： document.body.scrollHeight;<br>网页被卷去的高： document.body.scrollTop;<br>网页被卷去的左： document.body.scrollLeft;<br>网页正文部分上： window.screenTop;<br>网页正文部分左： window.screenLeft;<br>屏幕分辨率的高： window.screen.height;<br>屏幕分辨率的宽： window.screen.width;<br>屏幕可用工作区高度： window.screen.availHeight;<br>屏幕可用工作区宽度：window.screen.availWidth;</p>
+    <p align="left"><span style="color: #6f6f6f;"><span style="font-family: Tahoma;"><span><strong>1、offsetWidth&nbsp;<img title="JS中关于clientWidth&nbsp;<wbr>offsetWidth&nbsp;<wbr>scrollWidth&nbsp;<wbr>等鈥" src="http://www.zhufengpeixun.cn/b/static/image/smiley/default/sad.gif" alt="" border="0">width+padding+border)</strong></span></span></span></p>
+    <p align="left">当前对象的宽度。</p>
+    <p align="left">style.width也是当前对象的宽度(width+padding+border)。</p>
+    <p align="left">区别：1)style.width返回值除了数字外还带有单位px；</p>
+    <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2)如对象的宽度设定值为百分比宽度,则无论页面变大还是变小，</p>
+    <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;style.width都返回此百分比,而offsetWidth则返回在不同页面中对象的宽度值而不是百分比值；</p>
+    <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3)如果没有给 HTML 元素指定过 width样式，则 style.width 返回的是空字符串；</p>
+    <p align="left"><strong>2、offsetHeight :</strong><strong>(Height+padding+border)</strong></p>
+    <p align="left">当前对象的高度。</p>
+    <p align="left">style.height也是当前对象的高度(height+padding+border)。</p>
+    <p align="left">区别：1)style.height返回值除了数字外还带有单位px；</p>
+    <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2)如对象的高度设定值为百分比高度,则无论页面变高还是变矮，</p>
+    <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;style.height都返回此百分比,而offsetHeight则返回在不同页面中对象的高度值而不是百分比值；</p>
+    <p><span>&nbsp;</span><span>&nbsp;&nbsp;</span><span>&nbsp;</span><span>&nbsp;&nbsp;</span><span>&nbsp;</span><span>&nbsp;&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>3)如果没有给 HTML 元素指定过 height样式，则 style.height返回的是空字符串；</span></p>
+    <p align="left"><strong>3、offsetLeft :</strong></p>
+    <p align="left">当前对象到其上级层左边的距离。</p>
+    <p align="left">不能对其进行赋值.设置对象到其上级层左边的距离请用style.left属性。</p>
+    <p align="left">style.left当前对象到其上级层左边的距离。</p>
+    <p align="left">区别：1)style.left返回值除了数字外还带有单位px；</p>
+    <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2)如对象到其上级层左边的距离设定值为百分比，</p>
+    <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;style.left返回此百分比,而offsetLeft则返回到其上级层左边的距离的值；</p>
+    <p><span>&nbsp;</span><span>&nbsp;&nbsp;</span><span>&nbsp;</span><span>&nbsp;&nbsp;</span><span>&nbsp;</span><span>&nbsp;&nbsp;</span><span>&nbsp;</span><span>&nbsp;</span><span>3)如果没有给 HTML 元素指定过 left样式，则 style.left返回的是空字符串；</span></p>
+    <p align="left"><strong>4、offsetTop :</strong></p>
+    <p align="left">当前对象到其上级层顶部边的距离。</p>
+    <p align="left">不能对其进行赋值.设置对象到上级层顶部边的距离请用style.top属性。</p>
+    <p>&nbsp;</p>
+    <p align="left">style.top当前对象到其上级层顶部边的距离。</p>
+    <p align="left">区别：1)style.top返回值除了数字外还带有单位px；</p>
+    <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2)如对象到其上级层顶部边的距离设定值为百分比，</p>
+    <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;style.top返回此百分比,而offsetTop则返回到其上级顶部边的距离的值；</p>
+    <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3)如果没有给 HTML 元素指定过 top样式，则 style.top返回的是空字符串；</p>
+    <p align="left">注意：如果上级层为body，由于IE、FF对padding、margin的解释不一样所以要明确规定处理不是下列的区别就不成立了。</p>
+    <p align="left">IE&nbsp;&nbsp;&nbsp;1)如果Div的上级层是body，而div与body之间有个div，如body-&gt;div-&gt;divo；divo的offsetTop=div的padding+margin+boder；</p>
+    <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2）如果Div的上级层是body，如body&gt;divo；divo的offsetTop=div的padding+margin+boder；</p>
+    <p align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;这divo的offsetTop=divo的margin &gt;body.padding则为divo的margin，否则为body.padding谁大是谁？</p>
+    <p align="left">FF&nbsp;&nbsp;上述两种情况：offsetTop=margin+padding ;</p>
+    <p align="left">(IE与FF中的body默认padding为10)在IE6.0 FF3.6.13</p>
+    <p align="left"><strong>5、scrollWidth:</strong>获取对象的滚动宽度 。</p>
+    <p align="left"><strong>6、scrollHeight:</strong>&nbsp;获取对象的滚动高度。</p>
+    <p align="left"><strong>7、scrollLeft:</strong>设置或获取位于对象左边界和对象中目前可见内容的最左端之间的距离(width+padding为一体)</p>
+    <p align="left"><strong>8、scrollTop:</strong>设置或获取位于对象最顶端和对象中可见内容的最顶端之间的距离；(height+padding为一体)</p>
+    <p align="left"><strong>9、clientWidth:</strong>&nbsp;获取对象可见内容的宽度，不包括滚动条，不包括边框；</p>
+    <p align="left"><strong>10、clientHeight:</strong>&nbsp;获取对象可见内容的高度，不包括滚动条，不包括边框；</p>
+    <p align="left"><strong>11、clientLeft:</strong>&nbsp;获取对象的border宽度</p>
+    <p align="left"><strong>12、clientTop</strong>：获取对象的border高度</p>
+    <p align="left"><strong>13、offsetParent :</strong>当前对象的上级层对象.<br><br></p>
+    <p align="left">IE6.0、FF1.06+：<br>clientWidth = width + padding<br>clientHeight = height + padding<br>offsetWidth = width + padding + border<br>offsetHeight = height + padding + border</p>
+    <p align="left">IE5.0/5.5：<br>clientWidth = width - border<br>clientHeight = height - border<br>offsetWidth = width<br>offsetHeight = height</p>
+    <p align="left">以上属性测试的文档类型为：</p>
+    <p align="left">&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</p>
+    <p align="left">如果不写文档类型，浏览器就会按照 HTML 4.0 的方式来处理，则效果可能不同。</p>
+
+</div>
+
+<script>
+    let test =document.getElementById('test');
+    test.innerHTML=`屏幕分辨率的高：${window.screen.height} ;屏幕分辨率的宽：${window.screen.width}`
+</script>
+</body>
+
+
+</html>
