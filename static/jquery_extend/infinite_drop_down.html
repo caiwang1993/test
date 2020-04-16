@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>无限下拉</title>
+    <style>
+        ul li{
+            list-style: none;
+            width: 100%;
+            height: 50px;
+            border-bottom:1px solid #e0e0e0 ;
+            display: flex;
+            align-items: center;
+        }
+        html,body{margin: 0}
+    </style>
+</head>
+<body>
+   <div class="list">
+       <ul>
+           <li>item 1</li>
+           <li>item 2</li>
+           <li>item 3</li>
+           <li>item 4</li>
+           <li>item 5</li>
+           <li>item 6</li>
+           <li>item 7</li>
+           <li>item 8</li>
+           <li>item 9</li>
+           <li>item 10</li>
+           <li>item 11</li>
+           <li>item 12</li>
+           <li>item 13</li>
+           <li>item 14</li>
+           <li>item 15</li>
+           <li>item 16</li>
+           <li>item 17</li>
+           <li>item 18</li>
+           <li>item 19</li>
+           <li>item 20</li>
+       </ul>
+   </div>
+   <script src="style/js/jquery-1.11.1.min.js"></script>
+<script>
+    let totalHeight = $(document).height(); //整个文档高度  -- 不是html的高度，是整个页面的最高度
+    console.log(totalHeight);
+    let scrollTop = $(window).scrollTop();//浏览器可视窗口距离网页顶端的高度--滑动条已滑动距离
+    console.log(scrollTop);
+    let seeHeight = $(window).height(); // 可视窗口高度
+    console.log(seeHeight);
+    let seeHeight2 = document.documentElement.clientHeight; //seeHeight2== window.innerHeight ==seeHeight
+    //判断浏览器滑动
+    window.onscroll = function () {
+        scrollTop = $(window).scrollTop();
+        totalHeight = $(document).height();
+       if(scrollTop+seeHeight +50>= totalHeight){
+           let add_li = [];
+           for ( let i=1;i<=20;i++){
+               let li_html = '<li>item '+i+'</li>';
+               add_li.push(li_html)
+           }
+           $('.list ul').append(add_li)
+       }
+    }
+</script>
+</body>
+</html>
