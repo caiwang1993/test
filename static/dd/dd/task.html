@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./public/css/select2.min.css" >
+    <link rel="stylesheet" href="./public/layui/css/layui.css" >
+    <link rel="stylesheet" href="./public/css/common.css" >
+    <link rel="stylesheet" href="./public/css/production.css">
+
+
+</head>
+<body class="page taskPage">
+
+  <!-- 主体 -->
+  <div class="containerBox">
+    
+    <div class="frame main">
+
+      <div class="taskTabBox clear">
+        <a href="javascript:;" data-for="#hy" class="taskTabBoxItem js-tabItem active">待配种</a>
+        <a href="javascript:;" data-for="#ge" class="taskTabBoxItem js-tabItem">待妊检</a>
+        <a href="javascript:;" data-for="#pa" class="taskTabBoxItem js-tabItem">待分娩</a>
+        <a href="javascript:;" data-for="#ab" class="taskTabBoxItem js-tabItem">待断奶</a>
+        <a href="javascript:;" data-for="#da" class="taskTabBoxItem js-tabItem">每日任务</a>
+      </div>
+
+      <div class="taskPanBox">
+        <div class="taskPanItem js-panItem" id="hy" style="display: block;">
+
+          <div class="formBox clear">
+            
+            <div class="form">
+
+              <div class="formItem">
+                <input type="text" class="input"  placeholder="请输入耳号">
+              </div>
+
+              <div class="formItem formBtnBox">
+                <input type="button" class="button"  value="查询">
+              </div>
+
+            </div>
+          </div>
+
+          <div class="dataList dataTable">
+
+            <div class="table-responsive">
+
+              <table class="table table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th>耳号</th>
+                    <th>所在位置</th>
+                    <th>状态</th>
+                    <th>状态日期</th>
+                    <th>发生天数</th>
+                    <th>超期天数</th>
+                    <th>操作</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="javascript:;" class="overbit js-overbit">M45782</a></td>
+                    <td>后备舍01-01</td>
+                    <td>断奶</td>
+                    <td>2019-5-4</td>
+                    <td>108</td>
+                    <td>103</td>
+                    <td><a href="javascript:;" class="overbit js-hybridizationPage" data-overbit="M45782">登记配种</a></td>
+                  </tr>
+
+                </tbody>
+
+              </table>
+            </div>
+
+            <div class="dataPagination clear">
+              
+              <div class="dataLink">
+                <div class="paginationBox">
+                  <span class="paginationItem paginationTotal">共1546条数据</span>
+                  <span class="paginationItem paginationSelect">
+                    <select class="select selectSearchHide js-select">
+                      <option>10条/页</option>
+                      <option>20条/页</option>
+                      <option>30条/页</option>
+                      <option>40条/页</option>
+                    </select>
+                  </span>
+                  <span class="paginationItem paginationWrapper">
+                    <ul class="pagination">
+                      <li class="disabled">
+                        <span>
+                          <span aria-hidden="true">&#171</span>
+                        </span>
+                      </li>
+                      <li class="active">
+                        <span>1</span>
+                      </li>
+                      <li>
+                        <a href="#">2</a>
+                      </li>
+                      <li>
+                        <a href="#">3</a>
+                      </li>
+                      <li class="disabled">
+                        <a href="">...</a>
+                      </li>
+                      <li>
+                        <a href="#">4</a>
+                      </li>
+                      <li>
+                        <a href="#">5</a>
+                      </li>
+                      <li>
+                        <a href="#" aria-label="Next"><span aria-hidden="true">&#187</span></a>
+                      </li>
+                    </ul>
+                  </span>
+                  <span class="paginationItem paginationJump">
+                    前往<input type="text" class="paginationJumpInput">页
+                  </span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <div class="taskPanItem js-panItem" id="ge">
+
+          <div class="formBox clear">
+            
+            <div class="form">
+
+              <div class="formItem">
+                <input type="text" class="input"  placeholder="请输入耳号">
+              </div>
+
+              <div class="formItem formBtnBox">
+                <input type="button" class="button"  value="查询">
+              </div>
+
+            </div>
+          </div>
+
+          <div class="dataList dataTable">
+
+            <div class="table-responsive">
+
+              <table class="table table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th>耳号</th>
+                    <th>所在位置</th>
+                    <th>状态</th>
+                    <th>配种日期</th>
+                    <th>发生天数</th>
+                    <th>超期天数</th>
+                    <th>操作</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="javascript:;" class="overbit js-overbit">M45782</a></td>
+                    <td>妊娠舍01-01</td>
+                    <td>已配种</td>
+                    <td>2019-5-4</td>
+                    <td>108</td>
+                    <td>103</td>
+                    <td><a href="javascript:;" class="overbit js-gestationPage" data-overbit="M45782">登记妊娠</a></td>
+                  </tr>
+
+                </tbody>
+
+              </table>
+            </div>
+
+            <div class="dataPagination clear">
+              
+              <div class="dataLink">
+                <div class="paginationBox">
+                  <span class="paginationItem paginationTotal">共1546条数据</span>
+                  <span class="paginationItem paginationSelect">
+                    <select class="select selectSearchHide js-select">
+                      <option>10条/页</option>
+                      <option>20条/页</option>
+                      <option>30条/页</option>
+                      <option>40条/页</option>
+                    </select>
+                  </span>
+                  <span class="paginationItem paginationWrapper">
+                    <ul class="pagination">
+                      <li class="disabled">
+                        <span>
+                          <span aria-hidden="true">&#171</span>
+                        </span>
+                      </li>
+                      <li class="active">
+                        <span>1</span>
+                      </li>
+                      <li>
+                        <a href="#">2</a>
+                      </li>
+                      <li>
+                        <a href="#">3</a>
+                      </li>
+                      <li class="disabled">
+                        <a href="">...</a>
+                      </li>
+                      <li>
+                        <a href="#">4</a>
+                      </li>
+                      <li>
+                        <a href="#">5</a>
+                      </li>
+                      <li>
+                        <a href="#" aria-label="Next"><span aria-hidden="true">&#187</span></a>
+                      </li>
+                    </ul>
+                  </span>
+                  <span class="paginationItem paginationJump">
+                    前往<input type="text" class="paginationJumpInput">页
+                  </span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="taskPanItem js-panItem" id="pa">
+
+          <div class="formBox clear">
+            
+            <div class="form">
+
+              <div class="formItem">
+                <input type="text" class="input"  placeholder="请输入耳号">
+              </div>
+
+              <div class="formItem formBtnBox">
+                <input type="button" class="button"  value="查询">
+              </div>
+
+            </div>
+          </div>
+
+          <div class="dataList dataTable">
+
+            <div class="table-responsive">
+
+              <table class="table table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th>耳号</th>
+                    <th>所在位置</th>
+                    <th>状态</th>
+                    <th>配种日期</th>
+                    <th>预产日期</th>
+                    <th>妊娠天数</th>
+                    <th>超期天数</th>
+                    <th>操作</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="javascript:;" class="overbit js-overbit">M45782</a></td>
+                    <td>妊娠舍01-01</td>
+                    <td>妊娠</td>
+                    <td>2019-5-4</td>
+                    <td>2019-5-4</td>
+                    <td>108</td>
+                    <td>103</td>
+                    <td><a href="javascript:;" class="overbit js-parturitionPage" data-overbit="M45782">登记分娩</a></td>
+                  </tr>
+
+                </tbody>
+
+              </table>
+            </div>
+
+            <div class="dataPagination clear">
+              
+              <div class="dataLink">
+                <div class="paginationBox">
+                  <span class="paginationItem paginationTotal">共1546条数据</span>
+                  <span class="paginationItem paginationSelect">
+                    <select class="select selectSearchHide js-select">
+                      <option>10条/页</option>
+                      <option>20条/页</option>
+                      <option>30条/页</option>
+                      <option>40条/页</option>
+                    </select>
+                  </span>
+                  <span class="paginationItem paginationWrapper">
+                    <ul class="pagination">
+                      <li class="disabled">
+                        <span>
+                          <span aria-hidden="true">&#171</span>
+                        </span>
+                      </li>
+                      <li class="active">
+                        <span>1</span>
+                      </li>
+                      <li>
+                        <a href="#">2</a>
+                      </li>
+                      <li>
+                        <a href="#">3</a>
+                      </li>
+                      <li class="disabled">
+                        <a href="">...</a>
+                      </li>
+                      <li>
+                        <a href="#">4</a>
+                      </li>
+                      <li>
+                        <a href="#">5</a>
+                      </li>
+                      <li>
+                        <a href="#" aria-label="Next"><span aria-hidden="true">&#187</span></a>
+                      </li>
+                    </ul>
+                  </span>
+                  <span class="paginationItem paginationJump">
+                    前往<input type="text" class="paginationJumpInput">页
+                  </span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="taskPanItem js-panItem" id="ab">
+
+          <div class="formBox clear">
+            
+            <div class="form">
+
+              <div class="formItem">
+                <input type="text" class="input"  placeholder="请输入耳号">
+              </div>
+
+              <div class="formItem formBtnBox">
+                <input type="button" class="button"  value="查询">
+              </div>
+
+            </div>
+          </div>
+
+          <div class="dataList dataTable">
+
+            <div class="table-responsive">
+
+              <table class="table table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th>耳号</th>
+                    <th>所在位置</th>
+                    <th>状态</th>
+                    <th>分娩日期</th>
+                    <th>断奶日期</th>
+                    <th>发生天数</th>
+                    <th>超期天数</th>
+                    <th>操作</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a href="javascript:;" class="overbit js-overbit">M45782</a></td>
+                    <td>妊娠舍01-01</td>
+                    <td>哺乳</td>
+                    <td>2019-5-4</td>
+                    <td>2019-5-4</td>
+                    <td>108</td>
+                    <td>103</td>
+                    <td><a href="javascript:;" class="overbit js-ablactationPage" data-overbit="M45782">登记断奶</a></td>
+                  </tr>
+
+                </tbody>
+
+              </table>
+            </div>
+
+            <div class="dataPagination clear">
+              
+              <div class="dataLink">
+                <div class="paginationBox">
+                  <span class="paginationItem paginationTotal">共1546条数据</span>
+                  <span class="paginationItem paginationSelect">
+                    <select class="select selectSearchHide js-select">
+                      <option>10条/页</option>
+                      <option>20条/页</option>
+                      <option>30条/页</option>
+                      <option>40条/页</option>
+                    </select>
+                  </span>
+                  <span class="paginationItem paginationWrapper">
+                    <ul class="pagination">
+                      <li class="disabled">
+                        <span>
+                          <span aria-hidden="true">&#171</span>
+                        </span>
+                      </li>
+                      <li class="active">
+                        <span>1</span>
+                      </li>
+                      <li>
+                        <a href="#">2</a>
+                      </li>
+                      <li>
+                        <a href="#">3</a>
+                      </li>
+                      <li class="disabled">
+                        <a href="">...</a>
+                      </li>
+                      <li>
+                        <a href="#">4</a>
+                      </li>
+                      <li>
+                        <a href="#">5</a>
+                      </li>
+                      <li>
+                        <a href="#" aria-label="Next"><span aria-hidden="true">&#187</span></a>
+                      </li>
+                    </ul>
+                  </span>
+                  <span class="paginationItem paginationJump">
+                    前往<input type="text" class="paginationJumpInput">页
+                  </span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <div class="taskPanItem js-panItem" id="da">
+
+          <div class="formBox clear">
+            
+            <div class="form">
+
+              <div class="formItem">
+                <input type="text" class="input"  placeholder="请输入任务名称">
+              </div>
+
+              <div class="formItem formBtnBox">
+                <input type="button" class="button"  value="查询">
+              </div>
+
+            </div>
+          </div>
+
+          <div class="dataList dataTable">
+
+            <div class="table-responsive">
+
+              <table class="table table-bordered table-hover">
+                <thead>
+                  <tr>
+                    <th>发布日期</th>
+                    <th>发布人</th>
+                    <th>任务名称</th>
+                    <th>描述</th>
+                    <th>接收人</th>
+                    <th>任务状态</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2019-5-4</td>
+                    <td>西门</td>
+                    <td>断奶</td>
+                    <td>点点滴滴</td>
+                    <td>东门</td>
+                    <td>进行中</td>
+                  </tr>
+
+                </tbody>
+
+              </table>
+            </div>
+
+            <div class="dataPagination clear">
+              
+              <div class="dataLink">
+                <div class="paginationBox">
+                  <span class="paginationItem paginationTotal">共1546条数据</span>
+                  <span class="paginationItem paginationSelect">
+                    <select class="select selectSearchHide js-select">
+                      <option>10条/页</option>
+                      <option>20条/页</option>
+                      <option>30条/页</option>
+                      <option>40条/页</option>
+                    </select>
+                  </span>
+                  <span class="paginationItem paginationWrapper">
+                    <ul class="pagination">
+                      <li class="disabled">
+                        <span>
+                          <span aria-hidden="true">&#171</span>
+                        </span>
+                      </li>
+                      <li class="active">
+                        <span>1</span>
+                      </li>
+                      <li>
+                        <a href="#">2</a>
+                      </li>
+                      <li>
+                        <a href="#">3</a>
+                      </li>
+                      <li class="disabled">
+                        <a href="">...</a>
+                      </li>
+                      <li>
+                        <a href="#">4</a>
+                      </li>
+                      <li>
+                        <a href="#">5</a>
+                      </li>
+                      <li>
+                        <a href="#" aria-label="Next"><span aria-hidden="true">&#187</span></a>
+                      </li>
+                    </ul>
+                  </span>
+                  <span class="paginationItem paginationJump">
+                    前往<input type="text" class="paginationJumpInput">页
+                  </span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="layout"></div>
+
+  <script src="./public/js/jquery-2.0.3.min.js"></script>
+  <script src="./public/js/lwx.storage.js"></script>
+  <script src="./public/layui/layui.all.js"></script>
+  <script src="./public/js/select2.min.js"></script>
+  <script src="./public/js/common.js"></script>
+  <script src="./public/js/production.js"></script>
+</body>
+</html>

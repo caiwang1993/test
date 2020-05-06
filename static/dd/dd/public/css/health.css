@@ -1,0 +1,156 @@
+@charset "utf-8";
+ 
+/**
+* 健康模块样式
+* @author 鹿文学
+*/
+
+.formItem .input {
+  width: 157px;
+}
+.formTimeBox .timeBox,
+.formTimeBox .timeBoxSeperater {
+  float: left;
+} 
+.timeBoxSeperater {
+  padding: 0 10px;
+  position: relative;
+}
+.timeBoxSeperater:after {
+  content:'至';
+  position: absolute;
+  top: 0;
+  height: 31px;
+  line-height: 31px;
+  left: 5px;
+}
+
+.recordTable th {
+  padding-bottom: 9px;
+}
+.recordTable td {
+  padding: 9px 0px;
+}
+.healthPop .recordTable th,
+.healthPop .recordTable td {
+  min-width: 35px;
+  text-align: center;
+}
+.healthPop .checkboxBox {
+  justify-content: center;
+}
+.selectedHealthItem {
+  position: absolute;
+  bottom: 15px;
+  left: 20px;
+}
+
+.healthDetailPop .recordTable th, 
+.healthDetailPop .recordTable td {
+  text-align: center;
+  width: 25%;
+}
+
+.healthSetPage .behavior {
+  float: left;
+}
+.healthSetPage .form {
+  float: right;
+}
+
+.healthSetList {
+  padding: 0 68px;
+  display: table;
+  width: auto;
+  margin-left:0;
+}
+.healthSetItem {
+  display: table-row;
+} 
+.healthSetItem>span {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 6px 0;
+}
+.healthSetItemPrefix {
+  width: 90px;
+}
+.healthSetItemmain {
+  width: 186px;
+}
+.healthSetItemmain .selectBox {
+  display: flex;
+  justify-content: space-between;
+}
+.placeBox {
+  width: 97px;
+}
+.placeBox~.placeBox {
+  width: 83px;
+}
+
+.healthSetDetailTitle {
+  padding: 0 68px 0 78px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.healthSetDetailTitle .icon {
+  width: 18px;
+  height: 18px;
+  background: #52A5FF url("../images/form/icon-bai.png") center center no-repeat;
+  background-size: 60% 60%;
+}
+.healthSetDetailTableWrapper {
+  padding: 0 68px;
+}
+.healthSetDetailTable {
+  border-right:1px solid rgba(229,229,229,1);
+  border-bottom:1px solid rgba(229,229,229,1);
+  border-collapse: separate;
+}
+.healthSetDetailTable th,
+.healthSetDetailTable td {
+  width: 102px;
+  border-left: 1px solid rgba(229,229,229,1);
+  border-top: 1px solid rgba(229,229,229,1);
+  text-align: center;
+  padding: 0 5px;
+  height: 35px;
+}
+.healthSetDetailTable th {
+  background:rgba(243,245,248,1);
+}
+.healthSetDetailTable th:first-child,
+.healthSetDetailTable td:first-child {
+  width: 180px;
+}
+.healthSetDetailTable th:last-child,
+.healthSetDetailTable td:last-child {
+  width: 49px;
+}
+.healthSetDetailTable tbody tr:first-child td {
+  border-top: none;
+}
+.healthSetDetailTable .inputBox .input {
+  border: none;
+  text-align: center;
+  padding: 0 8px;
+}
+.healthSetDetailTable .select2-container--default .select2-selection--single .select2-selection__arrow b {
+  left: 0;
+}
+.healthSetDetailTable .select {
+  width: 92px;
+}
+.healthSetDetailTable .select2-container--default .select2-selection--single {
+  border: none;
+}
+.healthSetDetailDelete {
+  width: 32px;
+  height: 32px;
+  display: block;
+  background: url("../images/form/icon-delete.png") center center no-repeat;
+  background-size: 50% 50%;
+  margin: 0 auto;
+}

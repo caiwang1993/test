@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./public/css/select2.min.css" >
+    <link rel="stylesheet" href="./public/layui/css/layui.css" >
+    <link rel="stylesheet" href="./public/css/common.css" >
+    <link rel="stylesheet" href="./public/css/profile.css">
+
+
+</head>
+<body class="page">
+
+<!-- 主体 -->
+<div class="containerBox">
+    <div class="frame main">
+        <!--基本信息-->
+        <div class="pig-info-box">
+            <div class="v-middle">
+                <div class="pig-info-title">猪场信息</div>
+                <a href="javascript:;" class="behaviorItem ml-auto js-setAddOperation"><i class="icon"></i><span>新增</span></a>
+            </div>
+            <div class="dataList dataTable mt-20">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                        <tr>
+                            <th>猪场名称</th>
+                            <th>猪场类型</th>
+                            <th>猪场规模</th>
+                            <th>猪场地址</th>
+                            <th>负责人</th>
+                            <th>手机号码</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>溪谷猪场</td>
+                            <td>自繁自养</td>
+                            <td>3000头以上</td>
+                            <td>江苏省徐州市云龙区大郭庄路322号</td>
+                            <td>钱翼翼</td>
+                            <td>1546879524</td>
+                            <td >
+                                <a class="clickBtn js-setEditOperation" data-id="3" href="javascript:void(0)">编辑</a>　
+                                <a class="clickBtn js-setDeleteOperation" data-id="3" href="javascript:void(0)">删除</a>　
+                            </td>
+                        </tr>
+
+
+                        </tbody>
+
+                    </table>
+                </div>
+
+                <div class="dataPagination clear">
+                    <div class="dataLink">
+                        <div class="paginationBox">
+                            <span class="paginationItem paginationTotal">共1546条数据</span>
+                            <span class="paginationItem paginationSelect">
+                                    <select class="select selectSearchHide js-select">
+                                        <option>10条/页</option>
+                                        <option>20条/页</option>
+                                        <option>30条/页</option>
+                                        <option>40条/页</option>
+                                    </select>
+                                </span>
+                            <span class="paginationItem paginationWrapper">
+                                    <ul class="pagination">
+                                        <li class="disabled">
+                                            <span>
+                                                <span aria-hidden="true">&#171</span>
+                                            </span>
+                                        </li>
+                                        <li class="active">
+                                            <span>1</span>
+                                        </li>
+                                        <li>
+                                            <a href="#">2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">3</a>
+                                        </li>
+                                        <li class="disabled">
+                                            <a href="">...</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">4</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">5</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" aria-label="Next"><span aria-hidden="true">&#187</span></a>
+                                        </li>
+                                    </ul>
+                                </span>
+                            <span class="paginationItem paginationJump">
+                                    前往<input type="text" class="paginationJumpInput">页
+                                </span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<div id="layout"></div>
+
+<script src="./public/js/jquery-2.0.3.min.js"></script>
+<script src="./public/js/lwx.storage.js"></script>
+<script src="./public/layui/layui.all.js"></script>
+<script src="./public/js/select2.min.js"></script>
+<script src="./public/js/common.js"></script>
+<script src="./public/js/profile.js"></script>
+</body>
+</html>

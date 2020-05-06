@@ -1,0 +1,223 @@
+@charset "utf-8";
+body{
+    background-color: #EFF3F9;
+    font-family: "Microsoft Yahei", "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+.frame {
+     padding: 28px 30px;
+ }
+
+.basic-info-box{
+    width: 100%;
+    min-height: 532px;
+    background: #ffffff;
+    color: #333333;
+    font-size: 14px;
+    border-radius:6px;
+}
+.basic-info-box .basic-info-title{
+    width: 100%;
+    padding-left: 28px;
+    height: 52px;
+    line-height: 52px;
+    font-size: 16px;
+    border-bottom:1px solid #F3F5F8 ;
+}
+.basic-info-box .basic-info-table{
+    padding: 10px 28px 30px;
+}
+.detailTable td {
+    padding: 15px 0;
+}
+.detailTable .l {
+    text-align: left;
+    width: 88px;
+}
+.head-portrait{
+    width: 60px;
+    height: 60px;
+}
+.basic-info-table input:read-only{
+    border: none;
+    color: #333333;
+}
+.basic-info-table .edit-btn{
+    color: #52A5FF;
+    text-decoration: underline;
+}
+.basic-info-table .button{
+    border: none;
+    width: 140px;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    background: rgba(82,165,255,1);
+    border-radius: 2px;
+    color: #fff;
+}
+.detailTable td.pb-0{
+    padding-bottom: 0;
+}
+
+.pig-info-box{
+    width: 100%;
+    height: 802px;
+    background: #ffffff;
+    color: #333333;
+    font-size: 14px;
+    border-radius:6px;
+    padding: 25px 43px 25px 28px;
+}
+
+.dataTable.mt-20{
+    margin-top: 20px;
+}
+.dataTable .clickBtn {
+    padding: 0 4%;
+}
+
+
+.news-info-box{
+    width: 100%;
+    height: 802px;
+    background: #ffffff;
+    color: #333333;
+    font-size: 14px;
+    border-radius:6px;
+}
+.news-info-box .news-info-title-box{
+    width: 100%;
+    padding:0 43px 0 28px;
+    height: 52px;
+    line-height: 52px;
+    font-size: 16px;
+    border-bottom:1px solid #F3F5F8 ;
+}
+.news-info-title .no-read-news{
+    margin-left: 12px;
+    color: #999999;
+    font-size: 14px;
+}
+.news-info-list{
+    width: 100%;
+    padding: 0 43px 0 28px ;
+}
+.news-info-list .news-info-item{
+    width: 100%;
+    height: 45px;
+    border-bottom: 1px solid #F2F2F2;
+    position: relative;
+    padding:0 10px ;
+    display: flex;
+    align-items: center;
+}
+.news-info-item .news-spot{
+    position: absolute;
+    left: 0;
+    top: 19px;
+    width:6px;
+    height:6px;
+    background:rgba(248,31,31,1);
+    border-radius:50%;
+}
+.news-info-item .news-title{
+    width: 75%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.news-info-item .news-source{
+    width: 10%;
+}
+.news-info-item .news-date{
+    color: #999999;
+}
+.news-info-item .news-operation-btn{
+    margin-left: auto;
+    color: #52A5FF;
+
+}
+.v-middle{
+    display: flex;
+    align-items: center;
+}
+
+.behaviorItem.ml-auto{
+    margin-bottom: 0;
+    margin-left: auto;
+}
+.pig-info-box .pig-info-title{
+    font-size: 16px;
+}
+
+
+.dataPagination {
+    padding: 10px 0;
+}
+.dataExport {
+    float: left;
+    color:rgba(82,165,255,1);
+    position: relative;
+    padding-left: 23px;
+}
+.dataExport:hover {
+    color: rgba(82,165,255,1);
+}
+.dataExport .icon {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background: url("../images/form/iicon-daochu.png") center center no-repeat;
+    background-size: 100% 100%;
+}
+.dataLink {
+    float: right;
+}
+.paginationBox {
+    font-size: 12px;
+}
+.paginationItem {
+    float: left;
+}
+.paginationTotal {
+    line-height: 28px;
+    margin-right: 10px;
+}
+.paginationSelect .select{
+    width: 84px;
+}
+.pagination {
+    margin: 0 2px;
+}
+.paginationItem .select2-container--default .select2-selection--single {
+    height: 28px;
+    font-size: 12px !important;
+}
+.paginationItem .select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 27px;
+}
+.paginationItem .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 27px;
+}
+.paginationItem .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    width: 7px;
+    height: 7px;
+    margin-top: 10px;
+}
+.paginationItem .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    margin-top: 10px;
+}
+
+.paginationJumpInput {
+    width: 38px;
+    height: 26px;
+    line-height: 26px;
+    margin: 0 5px;
+    border:1px solid rgba(211,213,220,1);
+    border-radius:2px;
+    padding: 0 1px;
+}

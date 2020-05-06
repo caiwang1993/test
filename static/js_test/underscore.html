@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试引入underscore</title>
+</head>
+<body>
+<a href="javascript:;" class="js-click">点击我</a>
+<script src="js/underscore.js"></script>
+<script>
+    var list = [1,5,4,3]
+    var new_list = _.max(list);
+    console.log(new_list)   //5
+
+    //只执行一次once
+    var register = _.once(function () {
+        alert('Register ok!');
+    });
+    var click = document.getElementsByClassName('js-click')[0];
+    click.addEventListener('click',function () {
+        register();
+    })
+
+
+    //number\string可以===，其余类型===不相等
+    var o1 = ['Bob', { skills: ['Java', 'JavaScript'] }];
+    var o2 = ['Bob', { skills: ['Java', 'JavaScript'] }];
+    var string = "hahaha";
+    var string2 = "hahaha";
+    var array=[1,2,3,4];
+    var array2=[1,2,3,4];
+    var object = {name:'cw'};
+    var object2 = {name:'cw'};
+    console.log(o1 === o2); // false
+
+    var str = "测试replace替换,第二个replace在这里";
+    var val = "replace";
+    var reg = new RegExp(val,"g");
+    var new_str = str.replace(reg,'<span style="color: red">'+val+'</span>');
+    click.innerHTML=new_str;
+</script>
+</body>
+
+</html>

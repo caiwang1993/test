@@ -1,0 +1,45 @@
+@charset "utf-8";
+ 
+/**
+* 首页样式
+* @author 鹿文学
+*/
+ 
+
+.header {
+  background:rgba(40,49,66,1);
+  box-shadow: none;
+  color:rgba(150,158,186,1);
+}
+
+.infoItem .logout {
+  color: rgba(255,255,255,1);
+}
+.backWebSite {
+  display: block;
+}
+.backWebSite~.infoItem {
+  border-left: 1px solid rgba(242,242,242,1);
+}
+.accountName::after {
+  border-top-color: #969EBA;
+}
+.infoItem:hover {
+  background: rgba(47, 57, 78, 1);
+}
+.infoItem~.infoItem {
+  border-left-color: rgba(45,56,76,1);
+}
+
+.infoItem .iconTransfer {
+  background-image: url("../images/header/icon-qiehuani.png");
+}
+.infoItem .iconSet {
+  background-image: url("../images/header/icon-shezhi.png");
+}
+.infoItem .iconHelp {
+  background-image: url("../images/header/icon-help.png");
+}
+.infoItem .iconBackWebSite {
+  background-image: url("../images/header/icon-back.png");
+}

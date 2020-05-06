@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+.formItem .input {
+    width: 157px;
+}
+.formTimeBox .timeBox,
+.formTimeBox .timeBoxSeperater {
+    float: left;
+}
+.timeBoxSeperater {
+    padding: 0 10px;
+    position: relative;
+}
+.timeBoxSeperater:after {
+    content:'至';
+    position: absolute;
+    top: 0;
+    height: 31px;
+    line-height: 31px;
+    left: 5px;
+}
+body.activeMore .navItem.active ~ .navSubList{
+    padding-top: 66px; ;
+}
+
+.taskTabBox {
+    height: 42px;
+    line-height: 42px;
+    border-bottom:1px solid rgba(230,230,230,1);
+    margin-bottom: -1px;
+}
+.taskTabBoxItem {
+    float: left;
+    width: 105px;
+    height: 42px;
+    text-align: center;
+    border: 1px solid transparent;
+    border-top-width: 2px;
+}
+.taskTabBoxItem.active {
+    border-color: rgba(230,230,230,1);
+    border-bottom-color: #fff;
+    border-top-color: rgba(82,165,255,1);
+    color: #52A5FF;
+}
+
+.taskPanItem {
+    display: none;
+}
+.formItem .button.data-btn{
+    border:1px solid rgba(82,165,255,1);
+    background: #ffffff;
+    color: #52A5FF;
+}
+
+.formItem .button.data-btn.select{
+    border: none;
+    background: rgba(82,165,255,1);
+    color: #ffffff;
+}
+.formItem .button.data-btn:hover{
+    border: none;
+    background-color: rgba(82,165,255,.75);
+    color: #ffffff;
+}
+
+
+.dataPagination {
+    padding: 10px 0;
+}
+.dataExport {
+    float: left;
+    color:rgba(82,165,255,1);
+    position: relative;
+    padding-left: 23px;
+}
+.dataExport:hover {
+    color: rgba(82,165,255,1);
+}
+.dataExport .icon {
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+    background: url("../images/form/iicon-daochu.png") center center no-repeat;
+    background-size: 100% 100%;
+}
+.dataLink {
+    float: right;
+}
+.paginationBox {
+    font-size: 12px;
+}
+.paginationItem {
+    float: left;
+}
+.paginationTotal {
+    line-height: 28px;
+    margin-right: 10px;
+}
+.paginationSelect .select{
+    width: 84px;
+}
+.pagination {
+    margin: 0 2px;
+}
+.paginationItem .select2-container--default .select2-selection--single {
+    height: 28px;
+    font-size: 12px !important;
+}
+.paginationItem .select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 27px;
+}
+.paginationItem .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 27px;
+}
+.paginationItem .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    width: 7px;
+    height: 7px;
+    margin-top: 10px;
+}
+.paginationItem .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+    margin-top: 10px;
+}
+
+.paginationJumpInput {
+    width: 38px;
+    height: 26px;
+    line-height: 26px;
+    margin: 0 5px;
+    border:1px solid rgba(211,213,220,1);
+    border-radius:2px;
+    padding: 0 1px;
+}
+
+
+
+.recordTable th {
+    padding-bottom: 9px;
+}
+
+.earNumDetailPop .recordTable th, .earNumDetailPop .recordTable td {
+    text-align: center;
+    width: 50%;
+}
+.recordTable td {
+    padding: 9px 0px;
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./public/css/select2.min.css" >
+    <link rel="stylesheet" href="./public/layui/css/layui.css" >
+    <link rel="stylesheet" href="./public/css/common.css" >
+    <link rel="stylesheet" href="./public/css/production.css">
+
+
+</head>
+<body class="page">
+  
+  <div class="containerBox">
+    
+    <div class="frame main">
+
+      
+
+      <div class="formBox clear">
+        <div class="tab">
+            <a href="javascript:;" class="tabItem js-enter"><i class="icon"></i><span>进场</span></a>
+            <a href="javascript:;" class="tabItem js-turn"><i class="icon"></i><span>转舍</span></a>
+            <a href="javascript:;" class="tabItem js-leave"><i class="icon"></i><span>离场</span></a>
+        </div>
+        <div class="form">
+          
+          <div class="formItem">
+            <input type="text" class="input"  placeholder="请输入耳号">
+          </div>
+          
+          <div class="formItem selectBox">
+            <select class="select js-select selectSearchHide" placeholder="猪只类型">
+              <option></option>
+              <option>全部</option>
+              <option>公猪</option>
+              <option>母猪</option>
+            </select>
+          </div>
+
+          <div class="formItem selectBox">
+            <select class="select js-select" placeholder="所在栋舍">
+              <option></option>
+            </select>
+          </div>
+
+          <div class="formItem selectBox">
+            <select class="select js-select selectSearchHide" placeholder="当前状态">
+              <option></option>
+              <option>公猪</option>
+              <option>母猪</option>
+            </select>
+          </div>
+
+          <div class="formItem selectBox">
+            <select class="select js-select selectSearchHide" placeholder="是否在场">
+              <option></option>
+              <option>全部</option>
+              <option>是</option>
+              <option>否</option>
+            </select>
+          </div>
+
+          <div class="formItem formBtnBox">
+            <input type="button" class="button"  value="查询">
+          </div>
+
+        </div>
+      </div>
+      <div class="dataList dataTable">
+        <div class="table-responsive">
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>类型</th>
+                <th>耳号</th>
+                <th>品种</th>
+                <th>进场类型</th>
+                <th>胎次</th>
+                <th>日龄</th>
+                <th>出生日期</th>
+                <th>是否在场</th>
+                <th>当前状态</th>
+                <th>状态日期</th>
+                <th>状态天数</th>
+                <th>进场日期</th>
+                <th>所在位置</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>母猪</td>
+                <td><a href="javascript:;" data-id="" class="overbit js-overbit">M45782</a></td>
+                <td>长白</td>
+                <td>自繁</td>
+                <td>0</td>
+                <td>354</td>
+                <td>2019-5-4</td>
+                <td>是</td>
+                <td>哺乳</td>
+                <td>2019-10-4</td>
+                <td>30</td>
+                <td>2019-7-21</td>
+                <td>后备舍01-01</td>
+              </tr>
+
+              
+
+             
+
+            </tbody>
+
+          </table>
+        </div>
+
+        <div class="dataPagination clear">
+          <a href="" target="_blank" class="dataExport"><i class="icon"></i>导出报表</a>
+          <div class="dataLink">
+            <div class="paginationBox">
+              <span class="paginationItem paginationTotal">共1546条数据</span>
+              <span class="paginationItem paginationSelect">
+                <select class="select selectSearchHide js-select">
+                  <option>10条/页</option>
+                  <option>20条/页</option>
+                  <option>30条/页</option>
+                  <option>40条/页</option>
+                </select>
+              </span>
+              <span class="paginationItem paginationWrapper">
+                <ul class="pagination">
+                  <li class="disabled">
+                    <span>
+                      <span aria-hidden="true">&#171</span>
+                    </span>
+                  </li>
+                  <li class="active">
+                    <span>1</span>
+                  </li>
+                  <li>
+                    <a href="#">2</a>
+                  </li>
+                  <li>
+                    <a href="#">3</a>
+                  </li>
+                  <li class="disabled">
+                    <a href="">...</a>
+                  </li>
+                  <li>
+                    <a href="#">4</a>
+                  </li>
+                  <li>
+                    <a href="#">5</a>
+                  </li>
+                  <li>
+                    <a href="#" aria-label="Next"><span aria-hidden="true">&#187</span></a>
+                  </li>
+                </ul>
+              </span>
+              <span class="paginationItem paginationJump">
+                前往<input type="text" class="paginationJumpInput">页
+              </span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    
+  </div>
+
+  <div id="layout"></div>
+
+  <script src="./public/js/jquery-2.0.3.min.js"></script>
+  <script src="./public/js/lwx.storage.js"></script>
+  <script src="./public/layui/layui.all.js"></script>
+  <script src="./public/js/select2.min.js"></script>
+  <script src="./public/js/common.js"></script>
+  <script src="./public/js/production.js"></script>
+</body>
+</html>

@@ -55,7 +55,8 @@
         let scroll = new Scroll(that,options);
         window.onscroll= function () {
             return scroll.inital()
-        }
+        };
+        return this;
     };
 
 })(jQuery,window,document,undefined);

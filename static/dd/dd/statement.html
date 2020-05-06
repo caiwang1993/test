@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="./public/css/select2.min.css" >
+    <link rel="stylesheet" href="./public/layui/css/layui.css" >
+    <link rel="stylesheet" href="./public/css/common.css" >
+    <link rel="stylesheet" href="./public/css/statement.css">
+
+
+</head>
+<body class="page statementPage">
+
+  <!-- 主体 -->
+  <div class="containerBox"> 
+    <div class="frame main">
+
+      <div class="formBox clear">
+        <div class="form">
+
+          <div class="formItem formTimeBox">
+            <div class="timeBox">查询时间：</div>
+            <div class="timeBox"><input type="text" readonly class="input time layui-input" id="startTime"><i class="icon"></i></div><div class="timeBoxSeperater">-</div>
+            <div class="timeBox"><input type="text" readonly class="input time layui-input" id="endTime"><i class="icon"></i></div>
+          </div>
+
+          <div class="formItem formBtnBox">
+            <input type="button" class="button" id="btnSearch"  value="查询">
+          </div>
+
+        </div>
+      </div> 
+      <div class="dataList dataShow">
+        <div class="wrapper statementDataWrapper clear">
+            <div class="statementItem first left">
+              <div class="statementItemWrapper clear">
+                <div class="statementItemTitle">
+                  <i class="icon iconHybridization"></i>
+                  <h3 class="statementItemTitleText">配种情况</h3>
+                  <p class="statementItemTitleAddion">总数2564</p>
+                </div>
+                <div class="statementItemContent clear">
+                  <ul class="statementItemList">
+                    <li><h6 class="statementItemListItemNumber">2465</h6><p class="statementItemListItemMark">后备</p></li>
+                    <li><h6 class="statementItemListItemNumber">456</h6><p class="statementItemListItemMark">断奶</p></li>
+                    <li><h6 class="statementItemListItemNumber">56</h6><p class="statementItemListItemMark">返情</p></li>
+                    <li><h6 class="statementItemListItemNumber">546</h6><p class="statementItemListItemMark">空怀</p></li>
+                    <li><h6 class="statementItemListItemNumber">0</h6><p class="statementItemListItemMark">流产</p></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="statementItem second right">
+              <div class="statementItemWrapper clear">
+                <div class="statementItemTitle">
+                  <i class="icon iconAblactation"></i>
+                  <h3 class="statementItemTitleText">断奶情况</h3>
+                </div>
+                <div class="statementItemContent clear">
+                  <ul class="statementItemList">
+                    <li><h6 class="statementItemListItemNumber">564</h6><p class="statementItemListItemMark">断奶母猪/头</p></li>
+                    <li><h6 class="statementItemListItemNumber">564</h6><p class="statementItemListItemMark">断奶仔数/头</p></li>
+                    <li><h6 class="statementItemListItemNumber">25</h6><p class="statementItemListItemMark">窝均断奶数/头</p></li>
+                    <li><h6 class="statementItemListItemNumber">54.6</h6><p class="statementItemListItemMark">窝均断奶重/kg</p></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="statementItem last left">
+              <div class="statementItemWrapper clear">
+                <div class="statementItemTitle">
+                  <i class="icon iconParturition"></i>
+                  <h3 class="statementItemTitleText">分娩情况</h3>
+                </div>
+                <div class="statementItemContent clear">
+                  <ul class="statementItemList">
+                    <li><h6 class="statementItemListItemNumber">1556</h6><p class="statementItemListItemMark">分娩母猪</p></li>
+                    <li><h6 class="statementItemListItemNumber">1456</h6><p class="statementItemListItemMark">总活仔</p></li>
+                    <li><h6 class="statementItemListItemNumber">564</h6><p class="statementItemListItemMark">活仔母</p></li>
+                    <li><h6 class="statementItemListItemNumber">54</h6><p class="statementItemListItemMark">畸形</p></li>
+                    <li><h6 class="statementItemListItemNumber">52</h6><p class="statementItemListItemMark">死胎</p></li>
+                    <li><h6 class="statementItemListItemNumber">1556</h6><p class="statementItemListItemMark">总产仔</p></li>
+                    <li><h6 class="statementItemListItemNumber">1456</h6><p class="statementItemListItemMark">键仔</p></li>
+                    <li><h6 class="statementItemListItemNumber">956</h6><p class="statementItemListItemMark">活仔公</p></li>
+                    <li><h6 class="statementItemListItemNumber">0</h6><p class="statementItemListItemMark">弱仔</p></li>
+                    <li><h6 class="statementItemListItemNumber">0</h6><p class="statementItemListItemMark">木乃伊</p></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div id="layout"></div>
+
+  <script src="./public/js/jquery-2.0.3.min.js"></script>
+  <script src="./public/js/lwx.storage.js"></script>
+  <script src="./public/layui/layui.all.js"></script>
+  <script src="./public/js/select2.min.js"></script>
+  <script src="./public/js/common.js"></script>
+  <script src="./public/js/statement.js"></script>
+</body>
+</html>

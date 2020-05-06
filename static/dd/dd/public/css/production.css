@@ -1,0 +1,606 @@
+@charset "utf-8";
+ 
+/**
+* 生产管理样式
+* @author 鹿文学
+*/
+
+.tab {
+  float: left;
+}
+.tabItem {
+  display: block;
+  width: 72px;
+  height: 31px;
+  line-height: 31px;
+  border:1px solid rgba(82,165,255,1);
+  border-radius:2px;
+  text-align: center;  
+  color:rgba(82,165,255,1);
+  float: left;
+  margin-bottom: 17px;
+}
+.tabItem~.tabItem {
+  margin-left: 13px;
+}
+.tabItem.active,
+.tabItem:hover {
+  background:rgba(82,165,255,1);
+  color: #fff;
+}
+.tabItem .icon {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: url("../images/form/icon-lan.png") center center no-repeat;
+  background-size: 100% 100%;
+  margin-right: 6px;
+  vertical-align: middle;
+  margin-top: -2px;
+}
+.tabItem.active .icon,
+.tabItem:hover .icon {
+  background-image: url("../images/form/icon-bai.png");
+}
+
+.form {
+  float: right;
+}
+.formItem .input {
+  width:120px;
+  float: left;
+}
+.taskPage .formItem .input {
+  width: 140px;
+}
+
+
+.dataPagination {
+  padding: 10px 0;
+}
+.dataExport {
+  float: left;
+  color:rgba(82,165,255,1);
+  position: relative;
+  padding-left: 23px;
+}
+.dataExport:hover {
+  color: rgba(82,165,255,1);
+}
+.dataExport .icon {
+  position: absolute;
+  top: 6px;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  background: url("../images/form/iicon-daochu.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+.dataLink {
+  float: right;
+}
+.paginationBox {
+  font-size: 12px;
+}
+.paginationItem {
+  float: left;
+}
+.paginationTotal {
+  line-height: 28px;
+  margin-right: 10px;
+}
+.paginationSelect .select{
+  width: 84px;
+}
+.pagination {
+  margin: 0 2px;
+}
+.paginationItem .select2-container--default .select2-selection--single {
+  height: 28px;
+  font-size: 12px !important;
+}
+.paginationItem .select2-container--default .select2-selection--single .select2-selection__rendered {
+  line-height: 27px;
+}
+.paginationItem .select2-container--default .select2-selection--single .select2-selection__arrow {
+  height: 27px;
+}
+.paginationItem .select2-container--default .select2-selection--single .select2-selection__arrow b {
+  width: 7px;
+  height: 7px;
+  margin-top: 10px;
+}
+.paginationItem .select2-container--default.select2-container--open .select2-selection--single .select2-selection__arrow b {
+  margin-top: 10px;
+}
+
+.paginationJumpInput {
+  width: 38px;
+  height: 26px;
+  line-height: 26px;
+  margin: 0 5px;
+  border:1px solid rgba(211,213,220,1);
+  border-radius:2px;
+  padding: 0 1px;
+}
+
+
+/**
+ * 弹窗
+ */
+.overbitInput {
+  cursor: pointer;
+}
+.overspreadBox .input {
+  color: transparent;
+}
+.overspreadBox .icon {
+  position: absolute;
+  top: 3px;
+  left: 10px;
+  font-style: normal;
+  padding: 5px;
+  line-height: 1;
+  color: rgba(82,165,255,1);
+  background: rgba(220, 237, 255, 1);
+  border-radius: 2px;
+  cursor: pointer;
+  display: block;
+}
+
+.recordTable {
+  width: 90%;
+}
+.recordTable td {
+  padding: 12px 10px;
+}
+.recordTable .l {
+  text-align: right;
+  min-width: 100px;
+}
+.recordTable .inputBox,
+.recordTable .selectBox,
+.recordTable .unitBox,
+.recordTable .timeBox {
+  width: 150px;
+}
+.recordTable .textarea {
+  /* width: 457px; */
+  width: 150px;
+  height: 90px;
+}
+.recordExport {
+  position: absolute;
+  font-size: 12px;
+  bottom: 14px;
+  left: 20px;
+}
+.recordExport a {
+  font-size: inherit;
+  color: #F81F1F;
+}
+.recordExportItem {
+  float: left;
+  line-height: 30px;
+}
+.recordExport .layui-btn {
+  background: rgba(82,165,255,1);
+  height: 30px;
+  line-height: 30px;
+  margin-left: 10px;
+  float: left;
+}
+.leaveReason {
+  display: none;
+}
+
+
+/*
+ * 详情
+ */
+.detail {
+  padding-top: 10px;
+}
+.detailTab {
+  padding: 0 23px;
+}
+.detailTabItem {
+  float: left;
+  width: 100px;
+  height: 42px;
+  line-height: 42px;
+  font-size:16px;
+  color:rgba(62,85,128,1);
+  text-align: center;
+}
+.detailTabItem.active {
+  color:rgba(82,165,255,1);
+}
+.detailTabItem span {
+  display: inline-block;
+  border-bottom: 1px solid transparent;
+}
+.detailTabItem.active span {
+  border-bottom-color: rgba(82,165,255,1);
+}
+.detailPanItem {
+  display: none;
+}
+.detailBase {
+  padding: 12px 23px;
+}
+
+.detailTable {
+  width: 900px;
+}
+.detailTable .l {
+  text-align: right;
+  width: 120px;
+}
+.detailTable td {
+  padding: 5px 0;
+}
+.detailTable .selectBox,
+.detailTable .timeBox,
+.detailTable .inputBox,
+.detailTable .unitBox,
+.detailTable .textBox {
+  width: 200px;
+}
+.detailTable .textarea {
+  width: 650px;
+  height: 90px;
+}
+.selectBox .placeBox {
+  width: 67%;
+  display: block;
+  float: left;
+}
+.selectBox .placeBox:last-child {
+  width: 32%;
+  float: right;
+}
+.detailTable .textBox {
+  padding-left: 10px;
+}
+.detailOperation {
+  padding: 20px 39px 0;
+}
+.detailOperationItem,.detailOperationItem:hover {
+  float: left;
+  width: 67px;
+  height: 31px;
+  line-height: 31px;
+  border: 1px solid rgba(82,165,255,1);
+  border-radius:2px;
+  color:rgba(82,165,255,1);
+  text-align: center;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.detailOperationItem.disabled {
+  color:#999;
+  border-color: #999;
+  cursor: not-allowed;
+}
+.detailOperationItem.current {
+  background:rgba(82,165,255,1);
+  color: #fff;
+  cursor: not-allowed;
+}
+.detailInfo {
+  padding: 2px 0px 0;
+  width: 940px;
+  margin: 0 auto;
+}
+.detailInfo li {
+  float: left;
+  width: 16.6666666667%;
+  margin-top: 3px;
+  color: #666;
+}
+.detailInfo li span {
+  float: left;
+}
+.detailInfo li .l {
+  width: 92px;
+  text-align: right;
+}
+.detailList {
+  padding-top: 18px;
+}
+.detailListBox {
+  width: 100%;
+  overflow: auto;
+  padding-left: 7px;
+}
+.detailListTable {
+  width: 900px;
+  border-collapse: separate;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin: 0 auto;
+}
+.detailListTable>thead {
+  background: #fff;
+}
+.detailListTable .th {
+  height: 45px;
+  border-bottom: 1px solid #ddd;
+}
+.detailListTable .th,
+.detailListTable .td {
+  width: 120px;
+  vertical-align: middle;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  border-left: 1px solid #ddd;
+}
+.detailListTable>tbody>tr:first-child>.td {
+  border-top: none;
+}
+.detailListTable>tbody>tr>.td:last-child {
+  border-left: none;
+}
+.detailListTable .th:first-child,
+.detailLIstTable .td:first-child {
+  width: 100px;
+}
+.detailListTable .th:last-child,
+.detailLIstTable .td:last-child {
+  width: 679px;
+}
+.detailListTableSub {
+  width: 100%;
+  border: none;
+}
+.detailListTableSub .td:first-child {
+  width: 120px;
+}
+.detailListTableSub .td:last-child {
+  width: 668px;
+  border-right: none;
+}
+.detailListTableSub tr:first-child .td {
+  border-top: none;
+}
+.detailListTableSub tr:last-child .td {
+  border-bottom: none;
+}
+
+.detailListTableItem.hide .detailListTableSub{
+  display: none;
+}
+.detailListTableItem .detailShow,
+.detailListTableItem .detailShow:hover {
+  display: none;
+  color: rgba(82,165,255,1);
+  border-left: 1px solid #ddd;
+}
+.detailListTableItem.hide .detailShow {
+  display: block;
+}
+.detailListTableSubBox {
+  width: 80%;
+  margin: 15px auto;
+}
+.detailListTableSubDetail td {
+  padding: 5px 0;
+  text-align: left;
+}
+.detailListTableSubDetail .l {
+  text-align: right;
+  width: 80px;
+}
+.detailListTableSubDetail .selectBox,
+.detailListTableSubDetail .timeBox,
+.detailListTableSubDetail .inputBox,
+.detailListTableSubDetail .unitBox,
+.detailListTableSubDetail .textBox {
+  width: 180px;
+}
+.detailListTableSubDetail .textarea {
+  width: 100%;
+  height: 90px;
+}
+.detailListTableSubDetail .selectBox .select2 {
+  width: 58px !important;
+}
+
+
+.lwx-layer-btn .layui-layer-btn {
+  background: transparent;
+  box-shadow: none;
+}
+.overbitSelectBox {
+  margin-top: 9px;
+  margin-bottom: 0px;
+}
+.overbitSelectWrapper {
+  padding: 0px 24px;
+}
+.overbitSelectItem {
+  float: left;
+  width: 48%;
+}
+.overbitSelectItem~.overbitSelectItem {
+  margin-left: 4%;
+}
+.overbitSelectContent {
+  margin-top: 8px;
+  background:rgba(244,246,248,1);
+  border-radius:4px;
+  height: 214px;
+}
+.overbitSelectSearch {
+  padding: 14px 29px 0 20px;
+  position: relative;
+}
+.overbitSelectSearch .inputSearech {
+  border:1px solid rgba(204,204,204,1);
+  border-radius:4px;
+  width: 100%;
+  height: 35px;
+  padding: 0 38px 0 8px;
+}
+.overbitSelectSearch .icon {
+  width: 16px;
+  height: 16px;
+  background: url("../images/form/icon-search.png") center center no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  right: 44px;
+  top: 24px;
+  cursor: pointer;
+}
+.inputSearchList {
+  position: absolute;
+  z-index: 10;
+  background: #fff;
+  width: 222px;
+  border: 1px solid rgba(211,213,220,1);
+  box-shadow: 0px 0px 4px 0px rgba(68,68,68,0.11);
+  border-radius: 2px;
+  border-top: none;
+  display: none;
+  overflow: hidden;
+  overflow-y: scroll;
+  max-height: 162px;
+}
+.inputSearchListItem,.inputSearchListItemEmpty {
+  display: block;
+  padding: 0 8px;
+}
+.inputSearchListItem {
+  cursor: pointer;
+}
+.overbitSelectLinkBox {
+  padding-top: 7px;
+  padding-left: 20px;
+}
+.overbitSelectLink {
+  position: relative;
+}
+.overbitSelectLink.current {
+  color:rgba(82,165,255,1);
+}
+.overbitSelectLink~.overbitSelectLink {
+  padding-left: 24px;
+}
+.overbitSelectLink~.overbitSelectLink::before {
+  content:'';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: url("../images/form/icon-you.png") center center no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  top: 4px;
+  left: 7px;
+}
+
+.overbitRoomList {
+  overflow: hidden;
+  overflow-y: scroll;
+  padding: 0 20px;
+  height: 112px;
+}
+
+.overbitRoomItem {
+  padding: 1px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.overbitRoomItem .icon {
+  font-style: normal;
+  padding-left: 18px;
+  position: relative;
+  color:rgba(82,165,255,1);
+}
+.overbitRoomItem .icon::before {
+  content:'';
+  display: block;
+  width: 16px;
+  height: 16px;
+  background: url("../images/form/icon-xiaji.png") center center no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  left: 0;
+  top: 7px;
+}
+.overbitRoomItemFence {
+  padding: 1px 0;
+  display: block;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.overbitRoomItemFence .check {
+  opacity: 0;
+  position: absolute;overflow: hidden;
+  cursor: pointer;
+}
+.overbitRoomItemFence .icon {
+  width: 14px;
+  height: 14px;
+  background: url("../images/form/icon-wxz.png") center center no-repeat;
+  background-size: 100% 100%;
+  margin-right: 5px;
+}
+.overbitRoomItemFence .check:checked~.icon,
+.overbitRoomItemFence.on .icon  {
+  background-image: url("../images/form/icon-xz.png");
+}
+
+.overbitSelectList {
+  height: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+  padding: 7px 0;
+}
+.overbitSelectListItem {
+  position: relative;
+  padding: 1px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.overbitSelectListItem span {
+  max-width: 200px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.overbitSelectListItem .icon {
+  width: 14px;
+  height: 14px;
+  background: url("../images/form/icon-shanchu.png") center center no-repeat;
+  background-size: 100% 100%;
+}
+
+
+.taskTabBox {
+  height: 42px;
+  line-height: 42px;
+  border-bottom:1px solid rgba(230,230,230,1);
+  margin-bottom: -1px;
+}
+.taskTabBoxItem {
+  float: left;
+  width: 105px;
+  height: 42px;
+  text-align: center;
+  border: 1px solid transparent;
+  border-top-width: 2px;
+}
+.taskTabBoxItem.active {
+  border-color: rgba(230,230,230,1);
+  border-bottom-color: #fff;
+  border-top-color: rgba(82,165,255,1); 
+}
+
+.taskPanItem {
+  display: none;
+}

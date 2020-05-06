@@ -1,0 +1,160 @@
+@charset "utf-8";
+ 
+/**
+* 系统设置模块样式
+* @author 鹿文学
+*/
+.l {
+  text-align: right;
+}
+
+.recordTable .inputBox, 
+.recordTable .selectBox, 
+.recordTable .unitBox, 
+.recordTable .timeBox {
+  width: 150px;
+}
+
+.setPage .behavior {
+  float: left;
+}
+.setPage .form {
+  float: right;
+}
+
+.setPage .clickBtn {
+  padding:0 4%;
+}
+
+.setRoomPop .recordTable {
+  width: 90%;
+}
+.setRoomPop .recordTable td {
+  padding: 12px 10px;
+}
+
+.setColumnPop .recordTable {
+  width: 70%;
+  margin-left: 16%;
+}
+.setColumnPop .recordTable td {
+  padding: 9px 0 0;
+}
+.setColumnPop tbody tr:last-child td {
+  padding-bottom: 9px;
+}
+.setColumnPop .recordTable th:first-child {
+  width: 60%;
+}
+.setColumnPop th,
+.setColumnPop td,
+.setColumnPop .input {
+  text-align: center;
+}
+.setColumnPop .setDetailDelete,
+.setColumnPop .setDetailDelete:hover {
+  color: rgba(82,165,255,1);
+}
+.tabItem {
+  display: block;
+  width: 72px;
+  height: 31px;
+  line-height: 31px;
+  border:1px solid rgba(82,165,255,1);
+  border-radius:2px;
+  text-align: center;  
+  color:rgba(82,165,255,1);
+}
+.tabItem.active,
+.tabItem:hover {
+  background:rgba(82,165,255,1);
+  color: #fff;
+}
+.tabItem .icon {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  background: url("../images/form/icon-lan.png") center center no-repeat;
+  background-size: 100% 100%;
+  margin-right: 6px;
+  vertical-align: middle;
+  margin-top: -2px;
+}
+.tabItem.active .icon,
+.tabItem:hover .icon {
+  background-image: url("../images/form/icon-bai.png");
+}
+
+
+.paramPage th:first-child {
+  width: 16%;
+}
+
+.lableBox {
+  display: inline-block;
+  position: relative;
+}
+.clickCheckbox {
+  opacity: 0;
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+.clickCheckboxBtn {
+  display: block;
+  width:56px;
+  height:25px;
+  border:1px solid rgba(204,204,204,1);
+  border-radius:13px;
+  position: relative;
+  transition: all .2s;
+}
+.clickCheckboxBtn::before {
+  content:'';
+  display: block;
+  width:18px;
+  height:18px;
+  background:rgba(204,204,204,1);
+  border-radius:50%;
+  position: absolute;
+  left: 7px;
+  right: 100%;
+  top: 4px;
+  transition: all .2s;
+  margin-left: 0;
+}
+.clickCheckboxBtn::after {
+  content:'开';
+  color:rgba(204,204,204,1);
+  line-height: 25px;
+  position: absolute;
+  right: 9px;
+  left: 100%;
+  top: 0;
+  transition: all .2s;
+  margin-left: -25px;
+}
+
+.lableBox input[type=checkbox]:checked~.clickCheckboxBtn {
+  background:rgba(95,184,120,1);
+  border-color: rgba(95,184,120,1);
+  transition: all .2s;
+}
+.lableBox input[type=checkbox]:checked~.clickCheckboxBtn::before {
+  left: 100%;
+  right: 7px;
+  transition: all .2s;
+  background:rgba(255,255,255,1);
+  margin-left: -25px;
+}
+.lableBox input[type=checkbox]:checked~.clickCheckboxBtn::after {
+  content:'关';
+  left: 9px;
+  right: 100%;
+  transition: all .2s;
+  color: rgba(255,255,255,1);
+  margin-left: 0;
+}

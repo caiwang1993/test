@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>页面引入vue</title>
+</head>
+<body>
+<div id="test">
+    <h1>{{title}}</h1>
+    <input placeholder="数据的双向绑定" v-model="text">
+    <p>{{text}}</p>
+</div>
+
+<script src="https://unpkg.com/vue@2.0.1/dist/vue.js"></script>
+<script>
+    (function () {
+        let vm = new Vue({
+            el:'#test',    //绑定
+            data:{
+               title:'vue测试',
+                text:'双向绑定'
+            }
+        })
+    })(window)
+</script>
+</body>
+</html>
